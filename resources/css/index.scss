@@ -12,64 +12,77 @@ a{
     text-decoration: none;
     color: black;
 }
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+button {
+    width: 5.5rem;
+    height: 2rem;
+}
 //////HEADER//////
-////NavBar////
-.navbar{
-    display: flex;
-    justify-content: center;//centering inner container
-    border-bottom: 2px solid black;
-}
-.flex-container{
-    display: flex;
-    justify-content: space-between; //spacing nav items and logo
-    align-items: center; //aligning nav items and logo
-    width: 90%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.logo{
-    width: 50px;
-    height: 50px;
-    
-}
-li{
-    display: inline;
-    list-style: none;
-    padding: 0 10px;
-    letter-spacing: 3px;
-}
-///Home///
-.home{
-    display: flex;
-    height: 700px;
-    justify-content: center;
-    border-bottom: 2px solid black;
-    .flex-container{
-        max-width: 700px;
-        width: 50%;
+header {
+///Navbar///
+    .navbar{
         display: flex;
-        flex-direction: column;
+        justify-content: center;//centering inner container
+        border-bottom: 2px solid black;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 1;
+        .flex-container{
+            display: flex;
+            justify-content: space-between; //spacing nav items and logo
+            align-items: center; //aligning nav items and logo
+            width: 90%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            .logo{
+                width: 50px;
+                height: 50px;
+            }
+            li{
+                display: inline;
+                list-style: none;
+                padding: 0 10px;
+                letter-spacing: 3px;
+            }
+        }
+    }
+///Home///
+    .home{
+        display: flex;
+        height: 700px;
         justify-content: center;
-        align-items: flex-start;
-        h1{
-            font-size: 3rem;
-            margin-top: 0px;
-        }
-        .promise-left{
-            align-self: end;
-            margin-top: 30px;
-        }
+        border-bottom: 2px solid black;
+        .flex-container{
+            max-width: 700px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            h1{
+                margin-top: 0px;
+            }
+            .promise-left{
+                align-self: end;
+                margin-top: 30px;
+            }
 
+        }
     }
 }
-
 //////MAIN//////
 ///about me///
 #about {
     .flex-container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         min-height: 700px;
         border-bottom: 2px solid black;
@@ -103,5 +116,105 @@ li{
 }
 //////Skills//////
 #skills{
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 700px;
+        border-bottom: 2px solid black;
+        .grid-container{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            .box-icon {
+                display: flex;
+                flex-direction: column;
+                i{
+                    align-self: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+//////Projects//////
+#projects{
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 700px;
+        border-bottom: 2px solid black;
+        .grid-container {
+            display: grid;
+            gap: 10rem;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            .grid-item {
+                justify-self: center;
+                position: relative;
+                max-width: 300px;
+                max-height: 300px;
+                h3 {
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+            }
+            .hidden-hover{
+                display: none;
+                position: absolute;
+                top: 40%; //to get that damn hover alignment right
+                left: 20%; //to get that damn hover alignment right
+                //width: 100%;
+                z-index: 1;
+            }
+            .grid-item:hover .hidden-hover {
+                display: block;
+            }
+        }
+    }
+}
+
+//////Challenges//////
+#challenges {
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        min-height: 700px;
+        border-bottom: 2px solid black;
+    }
+}
+//////Blog///////
+#blog {
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        min-height: 700px;
+        border-bottom: 2px solid black;
+    }
+}
+//////Contact//////
+#contact {
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 2px solid black;
+        i {
+            margin: 10px;
+        }
+    }
+}
+//////footer//////
+footer {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 }

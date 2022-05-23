@@ -23,8 +23,8 @@
                             <li><a href="#about">About</a></li>
                             <li><a href="skills">Skills</a></li>
                             <li><a href="#projects">Projects</a></li>
-                            <li><a href="challenges">Code Challenges</a></li>
-                            <li><a href="blog">Blog</a></li>
+                            <li><a href="#challenges">Code Challenges</a></li>
+                            <li><a href="#blog">Blog</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
@@ -59,22 +59,117 @@
                     </div><!--end summary div-->
                 </div> <!--end outer grid container-->
             </div><!--end outer flex container-->
-        </section><!--end about me-->
+        </section><!--end about me section-->
         <section id="skills">
             <div class="flex-container">
                 <div class="section-title">
                     <h2>My Skills</h2>
                 </div>
-                <div class="grid-container">
-
+                <div class="icon grid-container">
+                    <div class="box-icon">
+                        <i class="fa-brands fa-html5 fa-6x"></i>
+                        <p>HTML5</p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-brands fa-css3-alt fa-6x"></i>
+                        <p>CSS3</p>
+                    </div>
+                    <div class="box-icon">
+                       <i class="fa-brands fa-js fa-6x"></i> 
+                       <p>JavaScript</p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-brands fa-sass fa-6x"></i>
+                        <p>Sass</p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-brands fa-git-alt fa-6x"></i>
+                        <p>Git</p>
+                    </div>
+                    <div class="box-icon">
+                        <i class="fa-brands fa-github fa-6x"></i>
+                        <p>GitHub</p>
+                    </div>
                 </div>
             </div>
+        </section><!--end skills section-->
+        <section id="projects">
+            <div class="flex-container">
+                <h2>Projects</h2>
+                <div class="grid-container all-projects">
+                    <div class="grid-item project" id="project1">
+                        <img src="./resources/pictures/temp-project.png" alt="temp project image">
+                        <div class="hidden-hover">
+                            <h3>Project 1</h3>
+                            <button class="live">Check it out!</button>
+                            <button class="github">Source Code</button>
+                        </div>
+                    </div>
+                    <div class="grid-item project" id="project2">
+                        <img src="./resources/pictures/temp-project.png" alt="temp project image">
+                        <div class="hidden-hover">
+                            <h3>Project 2</h3>
+                            <button class="live">Check it out!</button>
+                            <button class="github">Source Code</button>
+                        </div>
+                    </div>
+                    <div class="grid-item project" id="project3">
+                        <img src="./resources/pictures/temp-project.png" alt="temp project image">
+                        <div class="hidden-hover">
+                            <h3>Project 3</h3>
+                            <button class="live">Check it out!</button>
+                            <button class="github">Source Code</button>
+                        </div>
+                    </div>
+                    <div class="grid-item project" id="project4">
+                        <img src="./resources/pictures/temp-project.png" alt="temp project image">
+                        <div class="hidden-hover">
+                            <h3>Project 4</h3>
+                            <button class="live">Check it out!</button>
+                            <button class="github">Source Code</button>
+                        </div>
+                    </div>
+                </div><!--end project grid-container-->    
+            </div><!--end flex-container-->
+        </section><!--end project section-->
+        <section id="challenges">
+            <div class="flex-container">
+                <h2>Coding Challenges</h2>
+                <p>I don't have any challenges to put here yet.
+                I don't even know how I want to layout this section yet...</p>
+            </div><!--end flex-container-->
+        </section><!--end challenges section-->
+        <section id="blog">
+            <div class="flex-container">
+                <h2>Check out my brain dribble...</h2>
+                <p>My blog needs to be created from scratch.
+                Something I have never done before. So... wish me luck.</p>
+            </div><!--end flex-container-->
+        </section><!--end blog section-->
+        <section id="contact">
+            <div class="flex-container">
+                <div class="form-container">
+                    <form id="contact-form">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" id="name"><br>
+                        <label for="e-mail">Email</label><br>
+                        <input type="email" name="e-mail" id="email">
+                        <input type="submit" value="Submit">
+                    </form>
+                    <br>
+                    <textarea rows="10" cols="50" name="message" form="contact-form">
+                        Shoot me a message!</textarea>
+                </div>
+                <div class="social-container">
+                    <i class="fa-brands fa-linkedin fa-2x"></i>
+                    <i class="fa-solid fa-at fa-2x"></i>
+                    <i class="fa-brands fa-github fa-2x"></i>
+                </div>
+            </div><!--end flex-container-->
         </section>
-        <section id="projects"></section>
-        <section id="challenges"></section>
-        <section id="blog"></section>
-        <section id="contact"></section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>created with sweat and tears by Kim Lancaster | 2022</p>
+    </footer>
 </body>
 </html>
