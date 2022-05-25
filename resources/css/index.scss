@@ -22,51 +22,49 @@ button {
     width: 5.5rem;
     height: 2rem;
 }
+header, section {
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    min-height: 700px;
+}
+
 //////HEADER//////
-header {
 ///Navbar///
-    .navbar{
-        display: flex;
-        justify-content: center;//centering inner container
-        border-bottom: 2px solid black;
-        position: sticky;
-        top: 0;
-        background-color: white;
-        z-index: 1;
-        .flex-container{
-            display: flex;
-            justify-content: space-between; //spacing nav items and logo
-            align-items: center; //aligning nav items and logo
-            width: 90%;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            .logo{
-                width: 50px;
-                height: 50px;
-            }
-            li{
-                display: inline;
-                list-style: none;
-                padding: 0 10px;
-                letter-spacing: 3px;
-            }
-        }
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    padding: 0 20px;
+    border-bottom: 2px solid black;
+    .logo{
+        width: 50px;
+        height: 50px;
     }
+    li{
+        display: inline;
+        list-style: none;
+        padding: 0 10px;
+        letter-spacing: 3px;
+    }
+}
 ///Home///
     .home{
         display: flex;
-        height: 700px;
-        justify-content: center;
-        border-bottom: 2px solid black;
-        .flex-container{
-            max-width: 700px;
-            width: 50%;
+        align-items: center;
+        .text {
             display: flex;
+            max-width: 1000px;
             flex-direction: column;
-            justify-content: center;
             align-items: flex-start;
             h1{
                 margin-top: 0px;
+                justify-self: center;
             }
             .promise-left{
                 align-self: end;
@@ -75,45 +73,38 @@ header {
 
         }
     }
-}
 //////MAIN//////
 ///about me///
 #about {
-    .flex-container{
+    .outer { //flex-container with h2 and container with text and image
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         min-height: 700px;
-        border-bottom: 2px solid black;
-        .grid-container{
-            max-width: 1000px;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: 1fr repeat(4, 2fr) 1fr;
-            grid-gap: 10px 30px;
-            width: 90%;
-            height: 100%;
-            padding: 30px;
-            .image-container{
-                border: 2px solid black;
-                border-radius: 50%;
-                grid-area: 2/ 1/ span 2/ span 2;
-
-                overflow: hidden;
-                padding-top: 10px;
+        .inner { //flex-container with image container and text container
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            max-width: 2000px;
+            .flex-item { //image and text
+                margin: auto 30px;
             }
-            .about-summary{
-                grid-area: 2/ 3/ span 4/ span 4;
-                p {
-                    font-size: 1.2rem;
-                    line-height: 1.5;
-                }
+            .image {
+                width: 20rem;
+                height: 20rem;
+                border: 1px solid hidden;
+                border-radius: 180px;
+                overflow: hidden;
+            }
+            .text {
+                width: 30rem;
             }
         }
     }
-
 }
+
 //////Skills//////
 #skills{
     .flex-container{
@@ -122,7 +113,6 @@ header {
         justify-content: space-around;
         align-items: center;
         min-height: 700px;
-        border-bottom: 2px solid black;
         .grid-container{
             display: grid;
             grid-template-rows: 1fr 1fr;
@@ -149,7 +139,6 @@ header {
         justify-content: space-between;
         align-items: center;
         min-height: 700px;
-        border-bottom: 2px solid black;
         .grid-container {
             display: grid;
             gap: 10rem;
@@ -186,7 +175,6 @@ header {
         display: flex;
         flex-direction: column;
         min-height: 700px;
-        border-bottom: 2px solid black;
     }
 }
 //////Blog///////
@@ -195,7 +183,6 @@ header {
         display: flex;
         flex-direction: column;
         min-height: 700px;
-        border-bottom: 2px solid black;
     }
 }
 //////Contact//////
@@ -205,7 +192,6 @@ header {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        border-bottom: 2px solid black;
         i {
             margin: 10px;
         }
