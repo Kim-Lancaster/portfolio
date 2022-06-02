@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States.  
 
+6/1/22
+Hello, again!  I added a PHP section so I could show what I was learning.  I also added a HTML/CSS section so that I could practice those as well. My HTML/CSS content is also being uploaded to CodePen as well.
+
 5/31/22
 Last day of the month!  I've been spending the last 5 days going through lessons on SCSS and PHP.  I finished my SCSS course today, but now I have to practice!  I am trying to create my first pen on CodePen and challenge myself to do things in CSS and SCSS that I am not very familiar or comfortable with.  I have started a section under projects for JavaScript practice.  I will try to add a practice code or coding challenge there 4 times a week.  Wish me luck!
 
