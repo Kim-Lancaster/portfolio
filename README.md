@@ -2,8 +2,11 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States.  
 
+6/6/22
+Good evening!  I spent most of last week on Codecademy trying to learn more about the DOM, SASS and PHP.  This week I will be focusing on both learning and practical applications.  Today I finished the 'Creating Interactive Website' on Codecademy which focuses on manipulating the DOM with JavaScript.  Now I can move on to JQuery and React.  I have been playing around with transition, transform and clip-path on my website today.  I tried out some changes using clip-path, I really like it.  However, it doesn't look good right now.  Hopefully, I'll be able to work it out this week.  Wish me luck!  
+
 6/1/22
-Hello, again!  I added a PHP section so I could show what I was learning.  I also added a HTML/CSS section so that I could practice those as well. My HTML/CSS content is also being uploaded to CodePen as well.
+Hello, again!  I added a PHP section so I could show what I was learning. I created my first PHP program - mad-lib. I also added a HTML/CSS section so that I could practice those as well. My HTML/CSS content is also being uploaded to CodePen as well.
 
 5/31/22
 Last day of the month!  I've been spending the last 5 days going through lessons on SCSS and PHP.  I finished my SCSS course today, but now I have to practice!  I am trying to create my first pen on CodePen and challenge myself to do things in CSS and SCSS that I am not very familiar or comfortable with.  I have started a section under projects for JavaScript practice.  I will try to add a practice code or coding challenge there 4 times a week.  Wish me luck!
