@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/index.css">
-    <script src="https://kit.fontawesome.com/c239ea7dcb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">  
     <title>Kim Lancaster</title>
 </head>
 <body>
@@ -18,9 +18,8 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="skills">Skills</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#challenges">Code Challenges</a></li>
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -43,11 +42,11 @@
         <section id="about">
             <div class="flex-container outer">
                 <h2>About Me</h2>
-                <div class="flex-container inner">
-                    <div class="flex-item image">
+                <div class="flex-container img-and-text">
+                    <div class="flex-items image">
                         <img src="./resources/pictures/head-shot-temp.png" alt="Not My Face">
                     </div> <!--end picture div-->
-                    <div class="flex-item text">
+                    <div class="flex-items text">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos autem adipisci excepturi repudiandae, cum, distinctio molestiae minima repellat similique rerum omnis obcaecati modi consequatur magni sunt dicta laborum, tempora odio?
                             Necessitatibus rerum laudantium est perferendis magni labore esse atque nemo quod iste, dolor, maxime voluptatum. Labore in ipsum officia accusantium illum atque, necessitatibus error. Assumenda repellendus laboriosam aut voluptates est?
@@ -66,28 +65,44 @@
                 </div>
                 <div class="icon grid-container">
                     <div class="box-icon">
-                        <i class="fa-brands fa-html5 fa-6x"></i>
+                        <i class="devicon-html5-plain"></i>
                         <p>HTML5</p>
                     </div>
                     <div class="box-icon">
-                        <i class="fa-brands fa-css3-alt fa-6x"></i>
+                        <i class="devicon-css3-plain"></i>
                         <p>CSS3</p>
                     </div>
                     <div class="box-icon">
-                       <i class="fa-brands fa-js fa-6x"></i> 
-                       <p>JavaScript</p>
+                    <i class="devicon-javascript-plain"></i>
+                    <p>JavaScript</p>
                     </div>
                     <div class="box-icon">
-                        <i class="fa-brands fa-sass fa-6x"></i>
+                        <i class="devicon-sass-original"></i>
                         <p>Sass</p>
                     </div>
-                    <div class="box-icon">
-                        <i class="fa-brands fa-git-alt fa-6x"></i>
+                    <div class="box-icon">   
+                        <i class="devicon-git-plain"></i>
                         <p>Git</p>
                     </div>
                     <div class="box-icon">
-                        <i class="fa-brands fa-github fa-6x"></i>
+                        <i class="devicon-github-original"></i>
                         <p>GitHub</p>
+                    </div>
+                    <div class="box-icon">   
+                        <i class="devicon-php-plain"></i>
+                        <p>PHP</p>
+                    </div>
+                    <div class="box-icon">        
+                        <i class="devicon-jquery-plain"></i>
+                        <p>jQuery</p>
+                    </div>
+                    <div class="box-icon">        
+                        <i class="devicon-python-plain"></i>
+                        <p>Python</p>
+                    </div>
+                    <div class="box-icon">        
+                      <i class="devicon-cplusplus-plain"></i>
+                        <p>C++</p>
                     </div>
                 </div>
             </div>
@@ -132,14 +147,6 @@
                 </div><!--end project grid-container-->    
             </div><!--end flex-container-->
         </section>
-        <!-----challenges----->
-        <section id="challenges">
-            <div class="flex-container">
-                <h2>Coding Challenges</h2>
-                <p>I don't have any challenges to put here yet.
-                I don't even know how I want to layout this section yet...</p>
-            </div><!--end flex-container-->
-        </section>
         <!-----Blog----->
         <section id="blog">
             <div class="flex-container">
@@ -160,13 +167,12 @@
                         <input type="submit" value="Submit">
                     </form>
                     <br>
-                    <textarea rows="10" cols="50" name="message" form="contact-form">
-                        Shoot me a message!</textarea>
+                    <textarea rows="10" cols="50" name="message" form="contact-form" placeholder="Leave me a message"></textarea>
                 </div>
                 <div class="social-container">
-                    <i class="fa-brands fa-linkedin fa-2x"></i>
-                    <i class="fa-solid fa-at fa-2x"></i>
-                    <i class="fa-brands fa-github fa-2x"></i>
+                    <i class="devicon-linkedin-plain"></i>
+                    <i class="devicon-github-original"></i>
+                    <i class="devicon-codepen-plain"></i>
                 </div>
             </div><!--end flex-container-->
         </section>

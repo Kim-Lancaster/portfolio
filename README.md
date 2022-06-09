@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States.  
 
+6/8/22
+Why, hello, welcome!  Yesterday and today I dived into studying PHP.  And I'll do some more before I am done for the night.  I made some major cosmetic adjustments to my website.  I have a colore palette now.  And a font, from google fonts.  I switched my icons from font-awesome to devicon, unfortunatly they do not have an @ sign.  I sorted some of my sass files into partials as well, which is much easier to maintain.
+
 6/6/22
 Good evening!  I spent most of last week on Codecademy trying to learn more about the DOM, SASS and PHP.  This week I will be focusing on both learning and practical applications.  Today I finished the 'Creating Interactive Website' on Codecademy which focuses on manipulating the DOM with JavaScript.  Now I can move on to JQuery and React.  I have been playing around with transition, transform and clip-path on my website today.  I tried out some changes using clip-path, I really like it.  However, it doesn't look good right now.  Hopefully, I'll be able to work it out this week.  Wish me luck!  
 

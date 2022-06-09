@@ -1,8 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.4;
 }
 
 img {
@@ -12,7 +15,14 @@ img {
 
 a {
   text-decoration: none;
-  color: black;
+  font-weight: bold;
+}
+
+button {
+  font-weight: bold;
+  border-radius: 5px;
+  width: 6rem;
+  height: 2rem;
 }
 
 h1 {
@@ -23,20 +33,71 @@ h2 {
   font-size: 2rem;
 }
 
-button {
-  width: 5.5rem;
-  height: 2rem;
-}
-
-header, section {
-  border-bottom: 2px solid black;
+header,
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 700px;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.navbar,
+footer {
+  width: 100vw;
+}
+
+a {
+  color: #012b52;
+}
+
+button {
+  background: #fff4da;
+  color: #012b52;
+}
+
+.navbar {
+  background-color: #fff4da;
+  border-bottom: 2px solid #012b52;
+}
+
+header {
+  background-color: #012b52;
+  color: #fff4da;
+}
+
+#about {
+  background-color: #398a93;
+  color: #fff4da;
+}
+
+#skills {
+  background-color: #aa3c3c;
+  color: #fff4da;
+}
+
+#projects {
+  background-color: #6fcb9f;
+  color: #012b52;
+}
+
+#blog {
+  background-color: #f9cf7f;
+  color: #012b52;
+}
+
+#contact {
+  background-color: #012b52;
+  color: #fff4da;
+}
+
+footer {
+  background-color: #fff4da;
+  color: #012b52;
+  border-top: 2px solid #012b52;
 }
 
 .navbar {
@@ -53,10 +114,8 @@ header, section {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: white;
   z-index: 1;
   padding: 0 20px;
-  border-bottom: 2px solid black;
 }
 
 .navbar .logo {
@@ -69,12 +128,6 @@ header, section {
   list-style: none;
   padding: 0 10px;
   letter-spacing: 3px;
-}
-
-header {
-  background: lightblue;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0 95%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0 95%);
 }
 
 .home {
@@ -114,12 +167,6 @@ header {
   margin-top: 30px;
 }
 
-#about {
-  background: pink;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0 95%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0 95%);
-}
-
 #about .outer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,7 +183,7 @@ header {
   min-height: 700px;
 }
 
-#about .outer .inner {
+#about .outer .img-and-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,11 +199,11 @@ header {
   max-width: 2000px;
 }
 
-#about .outer .inner .flex-item {
+#about .outer .img-and-text .flex-items {
   margin: auto 30px;
 }
 
-#about .outer .inner .image {
+#about .outer .img-and-text .image {
   width: 20rem;
   height: 20rem;
   border: 1px solid hidden;
@@ -164,7 +211,7 @@ header {
   overflow: hidden;
 }
 
-#about .outer .inner .text {
+#about .outer .img-and-text .text {
   width: 30rem;
 }
 
@@ -181,7 +228,6 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 700px;
 }
 
 #skills .flex-container .grid-container {
@@ -189,9 +235,11 @@ header {
   display: grid;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  row-gap: 20px;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
 }
 
 #skills .flex-container .grid-container .box-icon {
@@ -208,9 +256,11 @@ header {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  font-size: 100px;
 }
 
 #skills .flex-container .grid-container .box-icon p {
+  margin: 20px 0;
   text-align: center;
 }
 
@@ -222,9 +272,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -246,7 +295,6 @@ header {
       justify-self: center;
   position: relative;
   max-width: 300px;
-  max-height: 300px;
 }
 
 #projects .flex-container .grid-container .grid-item h3 {
@@ -266,17 +314,6 @@ header {
   display: block;
 }
 
-#challenges .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 700px;
-}
-
 #blog .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,6 +323,9 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 700px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #contact .flex-container {
@@ -301,10 +341,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
 }
 
 #contact .flex-container i {
   margin: 10px;
+  font-size: 30px;
 }
 
 footer {

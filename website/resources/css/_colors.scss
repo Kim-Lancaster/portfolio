@@ -1,0 +1,40 @@
+a {
+    color: $dark-blue;
+}
+button {
+    background: $sand;
+    color: $dark-blue;
+}
+.navbar{
+    background-color: $sand;
+    border-bottom: 2px solid $dark-blue;
+}
+header{
+    background-color: $dark-blue;
+    color: $sand;
+}
+#about {
+    background-color: $tur-dark;
+    color: $sand;
+}
+#skills{
+    background-color: $redish;
+    color: $sand;
+}
+#projects{
+    background-color: $mint-green;
+    color: $dark-blue;
+}
+#blog{
+    background-color: $toupe;
+    color: $dark-blue
+}
+#contact{
+    background-color: $dark-blue;
+    color: $sand;
+}
+footer {
+    background-color: $sand;
+    color: $dark-blue;
+    border-top: 2px solid $dark-blue;
+}
