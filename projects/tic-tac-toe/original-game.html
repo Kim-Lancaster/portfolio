@@ -1,0 +1,406 @@
+<!--This is the original code that I turned in for class that I never got to work properly.
+    The HTML code for the table was provided by the teacher
+    Last looked at/worked on October 25, 2020 -->
+<html>
+<head>
+</head>
+<script>assignment
+    var s1, s2, s3, s4 = '?'; //for the computer
+    var s5, s6, s7, s8, s9 = '?';
+    var numberOfPlayes = 0;//to keep count of turns and for checking if there is a winner
+
+    function chooseFirst()//flipping a coin to see who goes first
+    {
+        var choice;
+        choice = Math.floor((Math.random() * 2) + 1);
+        if(choice == 1)
+        {
+            document.getElementById("playerXwin").innerHTML = "Player X goes first";
+        }
+        else
+        {
+            document.getElementById("playerOwin").innerHTML = "The Computer goes first";
+            computerPlays();
+        }
+    }
+    function computerPlays()//computer picks spot at random an places O if empty
+    {
+        var played = false;
+        var spot;
+        while(played == false)
+        {
+            spot = Math.floor((Math.random() * 9) + 1);
+            switch(spot)
+            {
+                case 1:
+                {
+                    if(s1 == '?')
+                    {
+                        document.getElementById("1").innerHTML = "O";
+                        s1 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 1
+                case 2:
+                {
+                    if(s2 == '?')
+                    {
+                        document.getElementById("2").innerHTML = "O";
+                        s2 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 2
+                case 3:
+                {
+                    if(s3 == '?')
+                    {
+                        document.getElementById("3").innerHTML = "O";
+                        s3 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 3
+                case 4:
+                {
+                    if(s4 == '?')
+                    {
+                        document.getElementById("4").innerHTML = "O";
+                        s4 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 4
+                case 5:
+                {
+                    if(s5 == '?')
+                    {
+                        document.getElementById("5").innerHTML = "O";
+                        s5 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 5
+                case 6:
+                {
+                    if(s6 == '?')
+                    {
+                        document.getElementById("6").innerHTML = "O";
+                        s6 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 6
+                case 7:
+                {
+                    if(s7 == '?')
+                    {
+                        document.getElementById("7").innerHTML = "O";
+                        s7 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 7
+                case 8:
+                {
+                    if(s8 == '?')
+                    {
+                        document.getElementById("8").innerHTML = "O";
+                        s8 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 8
+                case 9:
+                {
+                    if(s9 == '?')
+                    {
+                        document.getElementById("9").innerHTML = "O";
+                        s9 = 'O';
+                        played = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    break;
+                } //case 9
+            }//switch
+        }//while
+        numberOfPlayes++;
+        document.getElementById("goesFirst").innerHTML = "Number of Plays = " + numberOfPlayes;
+        checkForWinner();
+    }//end computerPlays
+    
+    function playerXplays(selected)//uses an onclick, checks which is selected and changes it to 'X'
+    {
+        if(selected == '1')
+            {
+                document.getElementById("1").innerHTML = "X";
+                s1 = 'X';
+                    
+            }//1
+        else if(selected == '2')
+                {
+                    document.getElementById("2").innerHTML = "X";
+                    s2 = 'X';
+                    
+                }//2
+        else if(selected == '3')
+                {
+                    document.getElementById("3").innerHTML = "X";
+                    s3 = 'X';
+                    
+                }//3
+        else if(selected == '4')
+                {
+                    document.getElementById("4").innerHTML = "X";
+                    s3 = 'X';
+                    
+                }//4
+        else if(selected == '5')
+                {
+                    document.getElementById("5").innerHTML = "X";
+                    s3 = 'X';
+                    
+                }//5
+        else if(selected == '6')
+                {
+                    document.getElementById("6").innerHTML = "X";
+                    s3 = 'X';
+                    
+                }//6
+        else if(selected == '7')
+                {
+                    document.getElementById("7").innerHTML = "X";
+                    s3 = 'X';
+                    
+                }//7
+        else if(selected == '8')
+                {
+                    document.getElementById("8").innerHTML = "X";
+                    s3 = 'X';
+                    
+                }//8
+        else if(selected == '9')
+                {
+                    document.getElementById("9").innerHTML = "X";
+                    s3 = 'X';
+                    
+                }//9
+        numberOfPlayes++;
+        document.getElementById("goesFirst").innerHTML = "Number of Plays = " + numberOfPlayes;
+        checkForWinner();
+        computerPlays();
+    }//PlayerXplays
+
+    function checkForWinner()//checks if top to bottom, left to right, or criss-cross is 'X' or 'O'
+    {
+            if((s1 == 'X' && s2 == 'X' && s3 == 'X')||(s1 == 'O' && s2 == 'O' && s3 == 'O'))//left to right
+            {
+                if(s1 == 'X')
+                {
+                document.getElementById("goesFirst").innerHTML = "Player X WINS!";
+                }
+                else
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player O WINS!"; 
+                }
+            }
+            else if((s4 == 'X' && s5 == 'X' && s6 == 'X') || (s4 == 'O' && s5 == 'O' && s6 == 'O'))//left to right
+            {
+                if(s4 == 'X')
+                {
+                document.getElementById("goesFirst").innerHTML = "Player X WINS!";
+                }
+                else
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player O WINS!"; 
+                } 
+            }
+            else if((s7 == 'X' && s8 == 'X' && s9 == 'X') || (s7 == 'O' && s8 == 'O' && s9 == 'O'))//left to right
+            {
+                if(s7 == 'X')
+                {
+                document.getElementById("goesFirst").innerHTML = "Player X WINS!";
+                }
+                else
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player O WINS!"; 
+                } 
+            }
+            else if((s1 == 'X' && s4 == 'X' && s7 == 'X')||(s1 == 'O' && s4 == 'O' && s7 == 'O'))//Top to bottom
+            {
+                if(s1 == 'X')
+                {
+                document.getElementById("goesFirst").innerHTML = "Player X WINS!";
+                }
+                else
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player O WINS!"; 
+                }
+            }
+            else if((s2 == 'X' && s5 == 'X' && s8 == 'X') || (s2 == 'O' && s5 == 'O' && s8 == 'O'))//top to bottom
+            {
+                if(s2 == 'X')
+                {
+                document.getElementById("goesFirst").innerHTML = "Player X WINS!";
+                }
+                else
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player O WINS!"; 
+                } 
+            }
+            else if((s3 == 'X' && s6 == 'X' && s9 == 'X') || (s3 == 'O' && s6 == 'O' && s9 == 'O'))//top to bottom
+            {
+                if(s3 == 'X')
+                {
+                document.getElementById("goesFirst").innerHTML = "Player X WINS!";
+                }
+                else
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player O WINS!"; 
+                } 
+            }
+            else if((s1 == 'X' && s5 == 'X' && s9 == 'X') || (s3 == 'O' && s5 == 'O' && s7 == 'O'))//criss cross
+            {
+                if(s1 == 'X')
+                {
+                document.getElementById("goesFirst").innerHTML = "Player X WINS!";
+                }
+                else if (s3 == 'X')
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player X WINS!"; 
+                }
+                else
+                {
+                    document.getElementById("goesFirst").innerHTML = "Player O WINS!"; 
+                } 
+
+            }
+            else
+            {
+                return;
+            }
+    }
+</script>
+<style>
+    #mydiv{
+        text-align: center;
+        font-size: 5em;
+    }
+    #bigtable{
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        font-family: cursive;
+    }
+    #smalltable{
+        width: 100%;
+        height: 70%;
+        text-align: center;
+        font-size: 3em;
+        border: 5px solid darkslategray;
+    }
+    #smalltable td{
+        border: 5px solid darkslategray; 
+        border-collapse: collapse;
+        vertical-align: top;
+    }
+    #smalltable td:hover{
+        background-color: darkslategray;
+    }
+    body{
+        background-color: rgb(15, 24, 24);
+        color: white;
+    }
+    #littleTable{
+        width: 100%;
+        height: 10%;
+    }
+    #littleTable td{
+        width: 40%;
+    }
+</style>
+
+<body>
+<div id="mydiv">
+Tic Tac Toe
+</div>
+<table id="bigtable">
+  <tr>
+        <td>
+            player X
+        </td>
+
+        <td>
+          <table id="smalltable" border=1>
+          <tr>
+              <td id="1" onclick="playerXplays(this.id)"> ? </td>
+              <td id="2" onclick="playerXplays(this.id)"> ? </td>
+              <td id="3" onclick="playerXplays(this.id)"> ? </td>
+          </tr>
+          <tr>
+              <td id="4" onclick="playerXplays(this.id)"> ? </td>
+              <td id="5" onclick="playerXplays(this.id)"> ? </td>
+              <td id="6" onclick="playerXplays(this.id)"> ? </td>
+          </tr>
+          <tr>
+              <td id="7" onclick="playerXplays(this.id)"> ? </td>
+              <td id="8" onclick="playerXplays(this.id)"> ? </td>
+              <td id="9" onclick="playerXplays(this.id)"> ? </td>
+          </tr>
+          </table>
+       </td>
+
+       <td>
+          player O
+       </td>
+  </tr>
+</table>
+<table id="littleTable">
+    <tr>
+        <td id="playerXwin"></td>
+        <td id="goesFirst">
+            <button type="button" onclick="chooseFirst()">Who goes first?</button>
+        </td>
+        <td id="playerOwin"></td>
+    </tr>
+
+</table>
+</body>

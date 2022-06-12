@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States.  
 
+6/11/22
+Forgot to add a daily update yester day.  I added two simple ph programs under practice.  Today, I have added an old tic-tac-toe game from college that I could never get to work corretly because I did not know enought CSS or JavaScript at the time.  I'll be redoing it over the next couple of days.  It will be one of my portfolio projects.  Plus, I hate unfinished projects. 
+
 6/8/22
 Why, hello, welcome!  Yesterday and today I dived into studying PHP.  And I'll do some more before I am done for the night.  I made some major cosmetic adjustments to my website.  I have a colore palette now.  And a font, from google fonts.  I switched my icons from font-awesome to devicon, unfortunatly they do not have an @ sign.  I sorted some of my sass files into partials as well, which is much easier to maintain.
 
