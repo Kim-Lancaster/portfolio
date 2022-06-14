@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+
+/* Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fascinate', cursive;
+    color:rgb(81, 119, 119);
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+/* Main page */
+.whole-page{
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr) 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "h1-top h1-top h1-top h1-top h1-top"
+        "left-side game-board game-board game-board right-side"
+        "bottom-info bottom-info bottom-info bottom-info bottom-info";
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(15, 24, 24);
+    border: 3px solid rgb(58, 99, 99);
+}
+
+/* The HEADER */
+
+h1 {
+    grid-area: h1-top;
+    justify-self: center;
+    align-self: center;
+    font-size: 8rem;
+}
+
+/* The LEFT SIDE */
+.left {
+    grid-area: left-side;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.left h3 {
+    width: 300px; 
+    height: 128px;
+}
+
+/* The BOARD */
+.game-board {
+    grid-area: game-board;
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 600px;
+    height:600px;
+    margin-right: 45px;
+    border: 3px solid rgb(58, 99, 99);
+    border-radius: 15px;
+    overflow: hidden;
+    
+}
+
+/* The SQUARES */
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(58, 99, 99);
+}
+
+.grid-item > p{
+    font-size: 5rem;
+}
+
+/* The RIGHT SIDE */
+.right {
+    grid-area: right-side;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-self: center;
+}
+
+/* The BOTTOM */
+.footer{
+    grid-area: bottom-info;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.coin,
+.winner{
+    display: inline-flex;
+}
+.coin p,
+.winner p {
+    margin: auto 10px;
+    font-size: 30px;
+}
+button {
+    background-color: rgb(192, 220, 247);
+    width: 125px;
+    height: 25px;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    margin: auto 10px;
+    font-size: 15px;
+}

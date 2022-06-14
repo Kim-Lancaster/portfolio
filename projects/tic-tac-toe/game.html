@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./game.css">
+    <title>Tic Tac Toe!</title>
+</head>
+<body>
+    <div class="whole-page grid-container">
+        <h1>Tic Tac Toe!</h1>
+        <div class="left grid-container">
+            <div class="player">
+                <h3>Player<br>Score:</h3>
+                <h3 id="player-score"></h3>
+            </div>
+            <div class="computer">
+                <h3>Computer<br>Score:</h3>
+                <h3 id="computer-score"></h3>
+            </div>
+        </div>
+        <div class="game-board grid-container">
+            <div class="grid-item top" id="top-1"><p>?</p></div>
+            <div class="grid-item top" id="top-2"><p>?</p></div>
+            <div class="grid-item top" id="top-3"><p>?</p></div>
+            <div class="grid-item middle" id="middle-1"><p>?</p></div>
+            <div class="grid-item middle" id="middle-2"><p>?</p></div>
+            <div class="grid-item middle" id="middle-3"><p>?</p></div>
+            <div class="grid-item bottom" id="bottom-1"><p>?</p></div>
+            <div class="grid-item bottom" id="bottom-2"><p>?</p></div>
+            <div class="grid-item bottom" id="bottom-3"><p>?</p></div>
+        </div>
+        <div class="right grid-container">
+            <h3>Top Scores!</h3>
+        </div>
+        <div class="footer grid-container">
+            <div class="coin">
+                <p>Who goes first?</p>
+                <button>Coin Flip!</button>
+            </div>
+            <div class="winner">
+                <p>Winner:</p>
+                <p id="the-winner">?</p>
+            </div>
+            <div class="play-again">
+                <button id="play-again">Play Again</button>
+                <button id="create-record">Add Score</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

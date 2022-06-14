@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States.  
 
+6/13/22
+Almost done with my PHP course!  Very excited to use it for the contact form on my portfolio.  I worked on the HTML and CSS for the tic-tac-toe project today.  I haven't had the opertunity to use CSS grids much before so it was good practice.  Hopefully I can get to the JavaScript tomorrow.  I forked my FIRST project today too.  I'm working on fixing some issues on a space shooter game.  It's in GoDot - a language that I'm not farmiliar.  Hopefully, I can learn a little something from working with other people's code.
+
 6/11/22
 Forgot to add a daily update yester day.  I added two simple ph programs under practice.  Today, I have added an old tic-tac-toe game from college that I could never get to work corretly because I did not know enought CSS or JavaScript at the time.  I'll be redoing it over the next couple of days.  It will be one of my portfolio projects.  Plus, I hate unfinished projects. 
 
