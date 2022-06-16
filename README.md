@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States.  
 
+6/15/22
+Yesterday I finished my PHP course!  Now, I have to hurry up and use what I learned before I forget it.  Today I started on JQuery and Node.js courses.  I have also begun creating the Javascript portion of my tic-tac-toe game.  I've already forgot some of what I learned about manipulating the DOM.  This is why practice after a lesson is so important.  I'll just need to look up a few things an I'm sure I'll get it.  No progress on my website, I'll try to work on the form and PHP tomorrow.
+
 6/13/22
 Almost done with my PHP course!  Very excited to use it for the contact form on my portfolio.  I worked on the HTML and CSS for the tic-tac-toe project today.  I haven't had the opertunity to use CSS grids much before so it was good practice.  Hopefully I can get to the JavaScript tomorrow.  I forked my FIRST project today too.  I'm working on fixing some issues on a space shooter game.  It's in GoDot - a language that I'm not farmiliar.  Hopefully, I can learn a little something from working with other people's code.
 
