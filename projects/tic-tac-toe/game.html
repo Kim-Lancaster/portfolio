@@ -21,15 +21,15 @@
             </div>
         </div>
         <div class="game-board grid-container">
-            <div class="grid-item top" id="top-1"><p>?</p></div>
-            <div class="grid-item top" id="top-2"><p>?</p></div>
-            <div class="grid-item top" id="top-3"><p>?</p></div>
-            <div class="grid-item middle" id="middle-1"><p>?</p></div>
-            <div class="grid-item middle" id="middle-2"><p>?</p></div>
-            <div class="grid-item middle" id="middle-3"><p>?</p></div>
-            <div class="grid-item bottom" id="bottom-1"><p>?</p></div>
-            <div class="grid-item bottom" id="bottom-2"><p>?</p></div>
-            <div class="grid-item bottom" id="bottom-3"><p>?</p></div>
+            <div class="grid-item top" id="top-1">?</div>
+            <div class="grid-item top" id="top-2">?</div>
+            <div class="grid-item top" id="top-3">?</div>
+            <div class="grid-item middle" id="middle-1">?</div>
+            <div class="grid-item middle" id="middle-2">?</div>
+            <div class="grid-item middle" id="middle-3">?</div>
+            <div class="grid-item bottom" id="bottom-1">?</div>
+            <div class="grid-item bottom" id="bottom-2">?</div>
+            <div class="grid-item bottom" id="bottom-3">?</div>
         </div>
         <div class="right grid-container">
             <h3>Top Scores!</h3>
@@ -38,7 +38,13 @@
         <div class="footer grid-container">
             <div class="coin">
                 <p>Who goes first?</p>
-                <button id="coin-flip">Coin Flip!</button>
+                <div class="who-goes-first" id="who-goes-first">
+                    <button class="coin-flip" id="coin-flip">Coin Flip!</button>
+                </div>
+            </div>
+            <div class="symbol">
+                <p>Player is X</p>
+                <p>Computer is O</p>
             </div>
             <div class="winner">
                 <p>Winner:</p>
@@ -50,5 +56,6 @@
             </div>
         </div>
     </div>
+    <script src="./game.js"></script>
 </body>
 </html>

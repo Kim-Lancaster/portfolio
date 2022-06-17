@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States.  
 
+6/16/22
+Worked on the logic for the tic-tac-toe game today.  I thought that I had a good handle on event listeners in JavaScript... that is not true.  I have certainly learned a lot after today but I am still unable to get the computer to 'click' for itself.  I have to click some where on the board for the computer's change to register.  I might have to seek outside help.  I still need to handle the logic for when the player or the computer win and how to store the top scores.  I'm not sure exactly how to do that either but I'm sure that it will be an awesome learning experience!
+
 6/15/22
 Yesterday I finished my PHP course!  Now, I have to hurry up and use what I learned before I forget it.  Today I started on JQuery and Node.js courses.  I have also begun creating the Javascript portion of my tic-tac-toe game.  I've already forgot some of what I learned about manipulating the DOM.  This is why practice after a lesson is so important.  I'll just need to look up a few things an I'm sure I'll get it.  No progress on my website, I'll try to work on the form and PHP tomorrow.
 

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 
-/* Resets */
+/* Resets/pre-sets */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,6 +26,16 @@ h3 {
     height: 100vh;
     background-color: rgb(15, 24, 24);
     border: 3px solid rgb(58, 99, 99);
+}
+button {
+    cursor: pointer;
+    background-color: rgb(192, 220, 247);
+    width: 125px;
+    height: 25px;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    margin: auto 10px;
+    font-size: 15px;
 }
 
 /* The HEADER */
@@ -73,6 +83,7 @@ h1 {
     justify-content: center;
     align-items: center;
     border: 3px solid rgb(58, 99, 99);
+    font-size: 5rem;
 }
 
 .grid-item > p{
@@ -81,9 +92,8 @@ h1 {
 
 .grid-item:hover {
     background-color: rgb(58, 99, 99);
-}
-.grid-item:hover > p{
     color: rgb(15, 24, 24);
+    cursor: pointer;
 }
 
 /* The RIGHT SIDE */
@@ -103,21 +113,29 @@ h1 {
     justify-content: space-around;
     align-items: center;
 }
+.who-goes-first {
+    width: 170px;
+    height: 40px;
+    justify-self: center;
+}
 .coin,
 .winner{
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
 }
 .coin p,
 .winner p {
-    margin: auto 10px;
-    font-size: 30px;
+    font-size: 40px;
+    margin-right: 20px;
 }
-button {
-    background-color: rgb(192, 220, 247);
-    width: 125px;
-    height: 25px;
-    border-radius: 10px;
-    letter-spacing: 3px;
-    margin: auto 10px;
-    font-size: 15px;
+.symbol {
+    font-size: 20px;
+}
+.play-again {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
 }
