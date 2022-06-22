@@ -21,15 +21,15 @@
             </div>
         </div>
         <div class="game-board grid-container">
-            <div class="grid-item top" id="top-1">?</div>
-            <div class="grid-item top" id="top-2">?</div>
-            <div class="grid-item top" id="top-3">?</div>
-            <div class="grid-item middle" id="middle-1">?</div>
-            <div class="grid-item middle" id="middle-2">?</div>
-            <div class="grid-item middle" id="middle-3">?</div>
-            <div class="grid-item bottom" id="bottom-1">?</div>
-            <div class="grid-item bottom" id="bottom-2">?</div>
-            <div class="grid-item bottom" id="bottom-3">?</div>
+            <div class="grid-item top right-border bottom-border" id="top-1"></div>
+            <div class="grid-item top right-border bottom-border" id="top-2"></div>
+            <div class="grid-item top bottom-border" id="top-3"></div>
+            <div class="grid-item middle right-border bottom-border" id="middle-1"></div>
+            <div class="grid-item middle right-border bottom-border" id="middle-2"></div>
+            <div class="grid-item middle bottom-border" id="middle-3"></div>
+            <div class="grid-item bottom right-border" id="bottom-1"></div>
+            <div class="grid-item bottom right-border" id="bottom-2"></div>
+            <div class="grid-item bottom" id="bottom-3"></div>
         </div>
         <div class="right grid-container">
             <h3>Top Scores!</h3>
@@ -40,6 +40,8 @@
                 <p>Who goes first?</p>
                 <div class="who-goes-first" id="who-goes-first">
                     <button class="coin-flip" id="coin-flip">Coin Flip!</button>
+                    <div id="hidden-player">PLAYER</div>
+                    <div id="hidden-computer">COMPUTER</div>
                 </div>
             </div>
             <div class="symbol">

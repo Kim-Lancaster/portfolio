@@ -2,10 +2,10 @@
 //The Board
 const allTiles = ['top-1', 'top-2', "top-3", "middle-1", "middle-2", "middle-3", "bottom-1", "bottom-2", "bottom-3"];
 
-const tile = [];
+const tiles = [];
 
 allTiles.forEach((t) => {
-    tile.push(document.getElementById(t));
+    tiles.push(document.getElementById(t));
 })
 
 //The buttons
@@ -22,7 +22,7 @@ const whoGoesFirst = document.getElementById("who-goes-first");
 
 //Whose turn is it at start
 let playersTurn = false;
-let computersTurn = false;
+// let computersTurn = false;
 
 //Who is X and O
 let playerSymbol = "X";
@@ -30,39 +30,38 @@ let computerSymbol = "O";
 
 //Misc
 const tilesClicked = 0;
+let eventTile = ""
+
 
 //////////////GAME LOGIC BELOW///////////////////////////
-
-
-const gameLoop = (event) => {
-    while(tilesClicked < 10){
-        let move = Math.floor(Math.random() * 9);
-        if(playersTurn && event.target.innerHTML === '?'){
-                event.target.innerHTML = playerSymbol;
-                event.target.style.fontSize = "5rem";
-                playersTurn = false;
-                computersTurn = true
-                tilesClicked++; 
-            }
-        if(computersTurn && tile[move].innerHTML === '?'){
-            tile[move].innerHTML = computerSymbol;
-            tile[move].style.fontSize = "5rem";
-            computersTurn = false; 
-            playersTurn = true;
-            tilesClicked++;    
-        }
+const removableFunc = event => {
+    if(playersTurn){
+        event.target.innerHTML = playerSymbol;
+        event.target.style.fontSize = "5rem";
+        eventTile = event.target;
+        playersTurn = false;
+    }else{
+        event.target.innerHTML = computerSymbol;
+        event.target.style.fontSize = "5rem";
+        playersTurn = true;
     }
-}
-//Game play
-const gamePlay = () => {
-    tile.forEach(t => {
-        t.addEventListener("click", event => { 
-            gameLoop(event);
-        }); 
-    });
+    
+    console.log(eventTile);
 }
 
-//Sets up who goes first by random selection
+tiles.forEach(tile => {
+    tile.addEventListener('click', removableFunc);
+})
+
+const startGame = () => {
+
+}
+
+//END GAME LOGIC////////////////////////////
+
+
+
+//Sets up who goes first by random selection/////
 const pickFirst = () => {
     return Math.floor(Math.random() * 2);
 }
@@ -76,46 +75,19 @@ const whoseTurn = () => {
         whoGoesFirst.style.height = "40px"
         whoGoesFirst.style.justifySelf = "center";
         computersTurn = true;
-        console.log(computersTurn)
-        gamePlay();
+        console.log(`computer's turn ${computersTurn}`)
     } else {
         whoGoesFirst.innerHTML = "PLAYER";
         whoGoesFirst.style.width = "170px";
         whoGoesFirst.style.height = "40px";
         whoGoesFirst.style.justifySelf = "center";
         playersTurn = true;
-        console.log(playersTurn)
-        gamePlay();
+        console.log(`player's turn ${playersTurn}`)
     }
-  
+    startGame();
 }
 coinFlip.onclick = whoseTurn;
-
-
-
-//Creating the tile style once clicked
-// const gamePlay = (event) => {
-//         if(playersTurn){
-//             event.target.innerHTML = playerSymbol;
-//             event.target.style.fontSize = "5rem";
-//             playersTurn = false;
-//             computersTurn = true   
-//         }
-//         if(computersTurn){
-//             event.target.innerHTML = computerSymbol;
-//             event.target.style.fontSize = "5rem";
-//             computersTurn = false;
-//             playersTurn = true;  
-//         }
-        
-// }
-// const markBoard = (arr) => {
-//     arr.onclick = mark;
-// }
-// tile.forEach((t) => {
-//     markBoard(t);
-// })   
-
+//END WHO GOES FIRST//////////////////////////
 
 
 
