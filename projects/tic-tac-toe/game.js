@@ -19,10 +19,12 @@ const computerScore = document.getElementById("computer-score");
 const rankedScores = document.getElementById("ranked-scores");
 const theWinner = document.getElementById("the-winner");
 const whoGoesFirst = document.getElementById("who-goes-first");
+const hiddenComputer = document.getElementById("hidden-computer");
+const hiddenPlayer = document.getElementById("hidden-player");
 
 //Whose turn is it at start
 let playersTurn = false;
-// let computersTurn = false;
+let computersTurn = false;
 
 //Who is X and O
 let playerSymbol = "X";
@@ -30,36 +32,55 @@ let computerSymbol = "O";
 
 //Misc
 const tilesClicked = 0;
-let eventTile = ""
+let eventTile = null;
+const occupiedTiles = [];
 
 
 //////////////GAME LOGIC BELOW///////////////////////////
-const removableFunc = event => {
+
+//telling the square what to do when clicked
+const clickEvent = event => {
     if(playersTurn){
         event.target.innerHTML = playerSymbol;
         event.target.style.fontSize = "5rem";
         eventTile = event.target;
-        playersTurn = false;
+        switchPlayer();
     }else{
         event.target.innerHTML = computerSymbol;
         event.target.style.fontSize = "5rem";
-        playersTurn = true;
+        eventTile = event.target
     }
     
-    console.log(eventTile);
+} ///might need to switch form innerHTML to innerText above
+
+
+//Adding the click event to all squares on the board
+const activateSquares = () =>{
+    tiles.forEach(tile => {
+        tile.addEventListener('click', clickEvent);
+    })
 }
 
-tiles.forEach(tile => {
-    tile.addEventListener('click', removableFunc);
-})
-
-const startGame = () => {
-
+const switchPlayer = () => {
+    if(eventTile){
+        occupiedTiles.push(eventTile);
+        eventTile.removeEventListener('click', clickEvent);
+    }
+    if(playersTurn && eventTile){
+        playersTurn = false;
+        switchPlayer();
+    }
+    else {
+        while(!playersTurn){//O is trying to mark an already filled spot and then forfiting it's turn
+            let choice = Math.floor(Math.random() * 9);
+            console.log(` choice is ${choice} and it contains ${tiles[choice].text}`);
+            if(tiles[choice].text === undefined){//this
+                tiles[choice].click();
+                playersTurn = true;
+            }
+        }
+    }
 }
-
-//END GAME LOGIC////////////////////////////
-
-
 
 //Sets up who goes first by random selection/////
 const pickFirst = () => {
@@ -70,21 +91,24 @@ const whoseTurn = () => {
     let first = pickFirst();
 
     if(first === 0) {
-        whoGoesFirst.innerHTML = "COMPUTER";
-        whoGoesFirst.style.width = "170px";
-        whoGoesFirst.style.height = "40px"
-        whoGoesFirst.style.justifySelf = "center";
-        computersTurn = true;
-        console.log(`computer's turn ${computersTurn}`)
+        coinFlip.style.visibility = "hidden";
+        hiddenComputer.innerHTML = "COMPUTER";
+        hiddenComputer.style.width = "170px";
+        hiddenComputer.style.height = "40px"
+        hiddenComputer.style.justifySelf = "center";
+        playersTurn = false;
+        console.log(`player's turn ${computersTurn}`)
     } else {
-        whoGoesFirst.innerHTML = "PLAYER";
-        whoGoesFirst.style.width = "170px";
-        whoGoesFirst.style.height = "40px";
-        whoGoesFirst.style.justifySelf = "center";
+        coinFlip.style.visibility = "hidden";
+        hiddenPlayer.innerHTML = "PLAYER";
+        hiddenPlayer.style.width = "170px";
+        hiddenPlayer.style.height = "40px";
+        hiddenPlayer.style.justifySelf = "center";
         playersTurn = true;
         console.log(`player's turn ${playersTurn}`)
     }
-    startGame();
+    activateSquares()
+    switchPlayer();
 }
 coinFlip.onclick = whoseTurn;
 //END WHO GOES FIRST//////////////////////////

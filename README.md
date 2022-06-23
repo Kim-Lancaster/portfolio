@@ -1,6 +1,9 @@
 Hello and Welcome to my website and portfolio!
 My name is Kim,
-I am a front-end developer based in the United States.  
+I am a front-end developer based in the United States. 
+
+6/22/22
+For sure I worked on my project yesterday... I must have forgotten to update my README.  I'm still having a hard time with the computer automation and the click events.  I think that it't time to put the project to the side and see if I can complete anything else for my portfolio.  Maybe with some time I'm learn something useful or an idea will come to me.
 
 6/16/22
 Worked on the logic for the tic-tac-toe game today.  I thought that I had a good handle on event listeners in JavaScript... that is not true.  I have certainly learned a lot after today but I am still unable to get the computer to 'click' for itself.  I have to click some where on the board for the computer's change to register.  I might have to seek outside help.  I still need to handle the logic for when the player or the computer win and how to store the top scores.  I'm not sure exactly how to do that either but I'm sure that it will be an awesome learning experience!
