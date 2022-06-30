@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States. 
 
+6/29/22
+I haven't updated in a week, but I have not been idle!  I switched gears after running into the wall with my tic-tac-toe project.  I have been working on my factitious cupcake website trying to get that finished.  So far I have added more content as well as breakpoints for the header and nav.  That might not seem like a lot for the week but I have also been studying.  I finished my course on responsive design and then was able to implement it on multiple sites.  Next up: Node.js and CSS animations.
+
 6/22/22
 For sure I worked on my project yesterday... I must have forgotten to update my README.  I'm still having a hard time with the computer automation and the click events.  I think that it't time to put the project to the side and see if I can complete anything else for my portfolio.  Maybe with some time I'm learn something useful or an idea will come to me.
 

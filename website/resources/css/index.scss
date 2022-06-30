@@ -1,6 +1,7 @@
 @import "variables";
-@import "reset";
+@import "globals";
 @import "colors";
+@import "media-queries";
 ///Navbar///
 .navbar{
     display: flex;
@@ -12,8 +13,8 @@
     z-index: 1;
     padding: 0 20px;
     .logo{
-        width: 50px;
-        height: 50px;
+        width: 3.25rem;
+        height: 3.25rem;
     }
     li{
         display: inline;

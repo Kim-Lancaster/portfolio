@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap');
+
+
+/* GLOBAL */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -10,18 +13,31 @@ body {
     background-color: rgb(43, 5, 5);
 }
 
+h2 {
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+img {
+    width: 18.75rem;
+    height: 12.5rem;
+    object-fit: cover;
+
+}
+/* BANNER */
 .hero {
+    position: relative;
     height: 95vh;
     width: auto;
 }
 
-.image-container{
-    min-height: 100%;
-    min-width: auto;
+header .image-container{
     background-image: url("../pictures/hero-cupcake.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    min-height: 100%;
+    min-width: auto;
 }
 .text-wrapper{
     display: flex;
@@ -40,11 +56,11 @@ h1 {
     white-space: nowrap;
 
 }
-h4 {
-    font-size: 2rem;
-    white-space: nowrap;
+header h2 {
     margin-bottom: 20px;
 }
+
+/* NAVIGATION */
 ul {
     width: 100%;
     display: flex;
@@ -58,16 +74,57 @@ li {
     font-size: 2rem;
     white-space: nowrap;
 }
-.main-content {
-    height: 100vh;
-}
 
+/* MAIN CONTENT */
+main {
+    color: rgb(43, 5, 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.specials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    align-items: space-around;
+    border: 3px solid rgb(175, 41, 41);
+    width: 90%;
+    height: auto;
+    background-color: rgba(245, 245, 245, 0.60);
+}
+.special-header {
+    margin-top: 2%;
+    margin-left: 20%;
+}
+.special-card-container {
+    min-height: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 10%;
+}
+.all-special-cards {
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    border: 3px solid rgb(175, 41, 41);
+}
+.special-text{
+    align-self: center;
+    margin-left: 5%;
+}
+.all-special-cards .image-container {
+    width: 300px;
+    height: 200px;
+}
+/* ***************BREAKPOINTS****************************
 /* laptop */
 @media only screen and (max-width: 1500px){
     h1 {
         font-size: 5rem;
     }
-    h4{
+    h2{
         font-size: 1.5rem;
     }
     li{
@@ -79,7 +136,7 @@ li {
     h1 {
         font-size: 4rem;
     }
-    h4{
+    h2{
         font-size: 1rem;
     }
     li{
@@ -92,7 +149,7 @@ li {
     h1{
         font-size: 3rem;
     }
-    h4{
+    h2{
         font-size: .75rem;
     }
     li{
@@ -104,7 +161,7 @@ li {
     h1{
         font-size: 2rem;
     }
-    h4{
+    h2{
         font-size: .75rem;
     }
     .hero{
@@ -123,10 +180,10 @@ li {
 /* super narrow phones like galaxy fold */
 @media only screen and (max-width: 375px){
     h1{
-        font-size: 1.25rem;
+        font-size: 1.45rem;
     }
-    h4{
-        font-size: .5rem;
+    h2{
+        font-size: .60rem;
     }
 }
 

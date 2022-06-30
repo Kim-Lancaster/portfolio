@@ -6,6 +6,7 @@
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   line-height: 1.4;
+  font-size: 16px;
 }
 
 img {
@@ -100,6 +101,17 @@ footer {
   border-top: 2px solid #012b52;
 }
 
+/* tablet */
+@media only screen and (max-width: 768px) {
+  .navbar {
+    height: 3.5rem;
+  }
+  .navbar .logo {
+    height: 2rem;
+  }
+}
+
+/* phone */
 .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,8 +131,8 @@ footer {
 }
 
 .navbar .logo {
-  width: 50px;
-  height: 50px;
+  width: 3.25rem;
+  height: 3.25rem;
 }
 
 .navbar li {
