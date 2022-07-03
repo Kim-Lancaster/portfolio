@@ -12,8 +12,11 @@
 body {
     background-color: rgb(43, 5, 5);
 }
-
 h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+h3 {
     font-size: 2rem;
     white-space: nowrap;
 }
@@ -23,6 +26,10 @@ img {
 li {
     list-style: none;
 }
+i {
+    color: rgb(43, 5, 5);
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* BANNER */
 .hero {
@@ -59,6 +66,7 @@ h1 {
 header h2 {
     margin-bottom: 20px;
 }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* NAVIGATION */
 ul {
@@ -75,6 +83,14 @@ nav li a{
     white-space: nowrap;
     text-decoration: none;
 }
+nav li:hover{
+    text-decoration: underline;
+}
+section {
+    width: 90%;
+    border-bottom: 2px solid rgb(175, 41, 41);
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* MAIN CONTENT */
 main {
@@ -96,18 +112,17 @@ main {
 .main-white-box li {
     font-size: 1.25rem;
 }
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 /* SPECIALS */
 .specials {
-    margin: 5% auto;
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 90%;
     gap: 10px;
     padding-bottom: 5%;
-    border-bottom: 3px solid rgb(175, 41, 41);
+    margin: 5% auto;
 }
 .card-container {
     margin-top: 5%;
@@ -122,19 +137,20 @@ main {
     max-height: 200px;
     display: flex;
     flex-direction: row;
-    border: 3px solid rgb(175, 41, 41);
+    border: 2px solid rgb(175, 41, 41);
     border-radius: 30px;
     overflow: hidden;
     background-color: rgba(245, 245, 245, 0.20);
 }
-.all-special-cards hr {
-    border: 1px solid rgb(175, 41, 41);
+.all-special-cards h4 {
+    font-size: 1.25rem;
+    border-bottom: 1px solid rgb(175, 41, 41);
 }
 .special-text{
     align-self: center;
     margin: auto 5%;
 }
-.special-text h3,
+.special-text h4,
 .special-text p {
     text-align: center;
 }
@@ -144,14 +160,111 @@ main {
     height: 100%;
     object-fit: cover;
 }
-/* MENU */
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
+/* MENU */
+.menu {/*align left and right side*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%; /*of the white box*/
+    padding-bottom: 5%;
+    margin: 5% auto;
+}
+.menu-grid { /*for menu*/
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: rgba(245, 245, 245, 0.20);
+    border: 2px solid rgb(175, 41, 41);
+    border-radius: 30px;
+}
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: start;
+    gap: 1.5rem;
+}
+.right-side li {
+    font-weight: bold;
+}
+.right-side h4 { /*flavor base*/
+    border-bottom: 1px solid rgb(175, 41, 41);
+}
+.right-side p { /*menu items*/
+    margin: 1rem auto;
+}
 /* CLASSES */
 .classes {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    row-gap: 3rem;
+    width: 90%;
+    padding-bottom: 5%;
+    margin: 5% auto;
+}
+.class-header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.class-examples {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.class-examples .image-container {
+    object-fit: cover;
+}
+.class-examples h4 {
+    text-align: center;
+}
+.class-summary {
+    width: 50%;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+    width: 90%;
+    padding-bottom: 5%;
+    margin: 5% auto;
+}
+.about-header {
+    align-self: start;
+    width: 50%;
+}
+/* CONTACT */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    column-gap: 3rem;
+    width: 90%;
+    padding-bottom: 5%;
+    margin: 5% auto; 
+}
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    
+}
+.contact-number {
+    display: flex;
+}
+.contact-number p {
+    align-self: center;
+}
+.contact i {
+    font-size: 2rem;
+    padding: 5%;
 }
 /* ***************BREAKPOINTS****************************
 /* laptop */
@@ -159,7 +272,7 @@ main {
     h1 {
         font-size: 5rem;
     }
-    h2{
+    h3{
         font-size: 1.5rem;
     }
     li{
@@ -171,7 +284,7 @@ main {
     h1 {
         font-size: 4rem;
     }
-    h2{
+    h3{
         font-size: 1rem;
     }
     li{
@@ -184,7 +297,7 @@ main {
     h1{
         font-size: 3rem;
     }
-    h2{
+    h3{
         font-size: .75rem;
     }
     li{
@@ -196,7 +309,7 @@ main {
     h1{
         font-size: 2rem;
     }
-    h2{
+    h3{
         font-size: .75rem;
     }
     .hero{
@@ -217,7 +330,7 @@ main {
     h1{
         font-size: 1.45rem;
     }
-    h2{
+    h3{
         font-size: .60rem;
     }
 }
