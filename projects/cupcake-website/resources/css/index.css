@@ -121,8 +121,8 @@ main {
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    padding-bottom: 5%;
-    margin: 5% auto;
+    padding-bottom: 10%;
+    /* margin: 5% auto; */
 }
 .card-container {
     margin-top: 5%;
@@ -168,8 +168,8 @@ main {
     flex-direction: row;
     justify-content: space-around;
     width: 90%; /*of the white box*/
-    padding-bottom: 5%;
-    margin: 5% auto;
+    padding-top: 5%;
+    padding-bottom: 10%;
 }
 .menu-grid { /*for menu*/
     display: flex;
@@ -203,8 +203,8 @@ main {
     align-items: center;
     row-gap: 3rem;
     width: 90%;
-    padding-bottom: 5%;
-    margin: 5% auto;
+    padding-top: 5%;
+    padding-bottom: 10%;
 }
 .class-header {
     display:flex;
@@ -218,7 +218,16 @@ main {
     align-items: end;
 }
 .class-examples .image-container {
+    border: 2px solid rgb(175, 41, 41);
+    border-radius: 30px;
+    overflow: hidden;
     object-fit: cover;
+    margin: 2%;
+    background-color: rgba(245, 245, 245, 0.20);
+}
+.class-examples img {
+    max-height: 400px;
+    max-width: auto;
 }
 .class-examples h4 {
     text-align: center;
@@ -234,12 +243,16 @@ main {
     align-items: center;
     column-gap: 3rem;
     width: 90%;
-    padding-bottom: 5%;
-    margin: 5% auto;
+    padding-top: 5%;
+    padding-bottom: 10%;
 }
 .about-header {
     align-self: start;
     width: 50%;
+}
+.about img {
+    border: 2px solid rgb(175, 41, 41);
+    border-radius: 30px;
 }
 /* CONTACT */
 .contact {
@@ -248,24 +261,29 @@ main {
     align-items: start;
     column-gap: 3rem;
     width: 90%;
-    padding-bottom: 5%;
-    margin: 5% auto; 
+    padding-top: 5%;
+    padding-bottom: 10%;
+    margin-bottom: 5%;
 }
 .contact-header {
     display: flex;
     flex-direction: column;
     
 }
-.contact-number {
+.contact-social {
     display: flex;
+    justify-content: space-evenly;
+    padding: 3%;
 }
-.contact-number p {
-    align-self: center;
-}
-.contact i {
+.contact-social i {
     font-size: 2rem;
-    padding: 5%;
+    padding: 1%;
 }
+.contact-social div {
+    display: flex;
+    white-space: nowrap;
+}
+
 /* ***************BREAKPOINTS****************************
 /* laptop */
 @media only screen and (max-width: 1500px){

@@ -80,8 +80,9 @@
                         </div>
                     </div>
                 </div>
+                <div id="menu"></div><!--This is here so the menu section in center when link is clicked-->
             </section> <!-- End specials-->
-            <section class="menu" #="menu">
+            <section class="menu">
                 <div class="left-side">
                     <div class="menu-header">
                         <h2>Menu</h2>
@@ -99,8 +100,8 @@
                     <div class="prices">
                         <ul>
                             <li>Individual - $3.50</li>
-                            <li>Half Dozen - $6.50</li>
-                            <li>Dozen - $11.00</li>
+                            <li>Half Dozen - $20.00</li>
+                            <li>Dozen - $40.00</li>
                         </ul> 
                     </div>
                     <div class="menu-grid">
@@ -134,7 +135,7 @@
                     </div>
                 </div>   
             </section> <!-- End MENU-->
-            <section class="classes" #="classes">
+            <section class="classes" id="classes">
                 <div class="class-header">
                     <h2>Try making them yourself!</h2>
                     <h3>Classes avaliable:</h3>
@@ -188,16 +189,22 @@
                         <a href="http://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
                         <a href="http://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
                         <a href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <div>
+                            <i class="fa-solid fa-phone"></i>
+                            <p>(805)867-5309</p>
+                        </div>
                     </div>
-                    <div class="contact-number">
-                        <i class="fa-solid fa-phone"></i>
-                        <p>(805)-867-5309</p>
+                    <div class="map" id="map">
+                        <img src="https://api.maptiler.com/maps/streets/static/-119.2433317,34.2763079,14/500x500.png?key=fdWM5OGnglOD95PWNb3g" alt="map of location">
                     </div>
                 </div>
+                
                 <div class="contact-form">
                     <form id="contact-form">
                         <label for="name">Name</label><br>
                         <input type="text" name="name" id="name"><br>
+                        <label for="phone">Phone Number</label><br>
+                        <input type="number" name="phone" id="phone"><br>
                         <label for="e-mail">Email</label><br>
                         <input type="email" name="e-mail" id="email">
                         <input type="submit" value="Submit">
@@ -208,5 +215,6 @@
             </section>
         </div><!--End MAIN white box div--> 
     </main>
+    <script src="./resources/map/map.js"></script>
 </body>
 </html>
