@@ -1,12 +1,27 @@
 
 //The Board
-const allTiles = ['top-1', 'top-2', "top-3", "middle-1", "middle-2", "middle-3", "bottom-1", "bottom-2", "bottom-3"];
+const allTiles = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 const tiles = [];
 
 allTiles.forEach((t) => {
     tiles.push(document.getElementById(t));
 })
+
+//The Board Array
+const boardArray = Array.from(Array(9).keys())
+
+//Winning Tile Combos
+const winningCombos = [
+    [0, 1, 2],
+	[3, 4, 5],
+	[6, 7, 8],
+	[0, 3, 6],
+	[1, 4, 7],
+	[2, 5, 8],
+	[0, 4, 8],
+	[2, 4, 6]
+]
 
 //The buttons
 const coinFlip = document.getElementById("coin-flip");
@@ -23,64 +38,19 @@ const hiddenComputer = document.getElementById("hidden-computer");
 const hiddenPlayer = document.getElementById("hidden-player");
 
 //Whose turn is it at start
-let playersTurn = false;
-let computersTurn = false;
+let currentPlayer = "";
 
 //Who is X and O
 let playerSymbol = "X";
 let computerSymbol = "O";
 
 //Misc
-const tilesClicked = 0;
-let eventTile = null;
-const occupiedTiles = [];
+let tilesClicked = 0;
+
 
 
 //////////////GAME LOGIC BELOW///////////////////////////
 
-//telling the square what to do when clicked
-const clickEvent = event => {
-    if(playersTurn){
-        event.target.innerHTML = playerSymbol;
-        event.target.style.fontSize = "5rem";
-        eventTile = event.target;
-        switchPlayer();
-    }else{
-        event.target.innerHTML = computerSymbol;
-        event.target.style.fontSize = "5rem";
-        eventTile = event.target
-    }
-    
-} ///might need to switch form innerHTML to innerText above
-
-
-//Adding the click event to all squares on the board
-const activateSquares = () =>{
-    tiles.forEach(tile => {
-        tile.addEventListener('click', clickEvent);
-    })
-}
-
-const switchPlayer = () => {
-    if(eventTile){
-        occupiedTiles.push(eventTile);
-        eventTile.removeEventListener('click', clickEvent);
-    }
-    if(playersTurn && eventTile){
-        playersTurn = false;
-        switchPlayer();
-    }
-    else {
-        while(!playersTurn){//O is trying to mark an already filled spot and then forfiting it's turn
-            let choice = Math.floor(Math.random() * 9);
-            console.log(` choice is ${choice} and it contains ${tiles[choice].text}`);
-            if(tiles[choice].text === undefined){//this
-                tiles[choice].click();
-                playersTurn = true;
-            }
-        }
-    }
-}
 
 //Sets up who goes first by random selection/////
 const pickFirst = () => {
@@ -91,27 +61,91 @@ const whoseTurn = () => {
     let first = pickFirst();
 
     if(first === 0) {
-        coinFlip.style.visibility = "hidden";
-        hiddenComputer.innerHTML = "COMPUTER";
-        hiddenComputer.style.width = "170px";
-        hiddenComputer.style.height = "40px"
-        hiddenComputer.style.justifySelf = "center";
-        playersTurn = false;
-        console.log(`player's turn ${computersTurn}`)
+        coinFlip.style.display = "none";
+        whoGoesFirst.innerHTML = "COMPUTER";
+        whoGoesFirst.style.width = "170px";
+        whoGoesFirst.style.height = "40px"
+        whoGoesFirst.style.justifySelf = "center";
+        currentPlayer = "computer";
+        console.log(`It's the computer's turn`)
     } else {
-        coinFlip.style.visibility = "hidden";
-        hiddenPlayer.innerHTML = "PLAYER";
-        hiddenPlayer.style.width = "170px";
-        hiddenPlayer.style.height = "40px";
-        hiddenPlayer.style.justifySelf = "center";
-        playersTurn = true;
-        console.log(`player's turn ${playersTurn}`)
+        coinFlip.style.display = "none";
+        whoGoesFirst.innerHTML = "PLAYER";
+        whoGoesFirst.style.width = "170px";
+        whoGoesFirst.style.height = "40px";
+        whoGoesFirst.style.justifySelf = "center";
+        currentPlayer = "player";
+        console.log(`It's the players turn`)
     }
-    activateSquares()
-    switchPlayer();
+    activateSquares();
 }
 coinFlip.onclick = whoseTurn;
-//END WHO GOES FIRST//////////////////////////
+
+
+//Adding the click event to all squares on the board
+const activateSquares = () =>{
+    tiles.forEach(tile => {
+        tile.addEventListener('click', gamePlay);
+    })
+}
+
+//telling the square what to do when clicked
+const gamePlay = event => {
+    if(currentPlayer === "player"){
+        if(squareNotMarked(event.target)){
+            tilesClicked += 1;
+            boardArray[event.target.id - 1] = playerSymbol;
+            event.target.innerHTML = playerSymbol;
+            event.target.style.fontSize = "5rem";
+            checkForWinner(currentPlayer);
+            currentPlayer = "computer";
+        }
+    } else {
+        if(squareNotMarked(event.target)){
+            tilesClicked += 1;
+            boardArray[event.target.id - 1] = computerSymbol;
+            event.target.innerHTML = computerSymbol;
+            event.target.style.fontSize = "5rem";
+            checkForWinner(currentPlayer);
+            currentPlayer = "player";
+        }
+    }
+    isItATie();
+}
+
+const squareNotMarked = (event) => {
+    if(typeof boardArray[event.id - 1] === "number") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+const checkForWinner = (player) => {
+    let tilesPlayed = [];
+    if(player === 'player'){
+        let index = boardArray.indexOf(playerSymbol) 
+        while(index != -1) {
+            tilesPlayed.push(index);
+            index = boardArray.indexOf(playerSymbol, index + 1) 
+        }
+        console.log(`players moves ${tilesPlayed}`)
+        //NEED TO CHECK IF ANY OF THE WINNING COMBOS HAVE BEEN ACHIEVED HERE
+        //IN SIDE THE IF/ELSE STATEMENT
+    } else {
+        let index = boardArray.indexOf(computerSymbol)
+        while(index != -1) {
+            tilesPlayed.push(index);
+            index = boardArray.indexOf(computerSymbol, index + 1)
+        }
+        console.log(`computers moves ${tilesPlayed}`)
+        //NEED TO CHECK IF ANY OF THE WINNING COMBOS HAVE BEEN ACHIEVED HERE
+        //IN SIDE THE IF/ELSE STATEMENT
+    }
+}
+
+
+
 
 
 
