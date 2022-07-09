@@ -59,24 +59,19 @@ const pickFirst = () => {
 const whoseTurn = () => {
         
     let first = pickFirst();
-
+    coinFlip.style.display = "none";
     if(first === 0) {
-        coinFlip.style.display = "none";
         whoGoesFirst.innerHTML = "COMPUTER";
-        whoGoesFirst.style.width = "170px";
-        whoGoesFirst.style.height = "40px"
-        whoGoesFirst.style.justifySelf = "center";
         currentPlayer = "computer";
-        console.log(`It's the computer's turn`)
+        // console.log(`It's the computer's turn`)
     } else {
-        coinFlip.style.display = "none";
         whoGoesFirst.innerHTML = "PLAYER";
-        whoGoesFirst.style.width = "170px";
-        whoGoesFirst.style.height = "40px";
-        whoGoesFirst.style.justifySelf = "center";
         currentPlayer = "player";
-        console.log(`It's the players turn`)
+        // console.log(`It's the players turn`)
     }
+    whoGoesFirst.style.width = "170px";
+    whoGoesFirst.style.height = "40px"
+    whoGoesFirst.style.justifySelf = "center";
     activateSquares();
 }
 coinFlip.onclick = whoseTurn;
@@ -94,23 +89,21 @@ const gamePlay = event => {
     if(currentPlayer === "player"){
         if(squareNotMarked(event.target)){
             tilesClicked += 1;
-            boardArray[event.target.id - 1] = playerSymbol;
-            event.target.innerHTML = playerSymbol;
-            event.target.style.fontSize = "5rem";
-            squaresPlayedByCurrentPlayer(currentPlayer);
+            markSquare(event.target, playerSymbol);
+            let playersSquares = squaresPlayedByCurrentPlayer(currentPlayer);
+            
             currentPlayer = "computer";
         }
     } else {
         if(squareNotMarked(event.target)){
             tilesClicked += 1;
-            boardArray[event.target.id - 1] = computerSymbol;
-            event.target.innerHTML = computerSymbol;
-            event.target.style.fontSize = "5rem";
-            squaresPlayedByCurrentPlayer(currentPlayer);
+            markSquare(event.target, computerSymbol);
+            let computersSquares = squaresPlayedByCurrentPlayer(currentPlayer);
+            
             currentPlayer = "player";
         }
     }
-    isItATie();
+    checkForTie();
 }
 
 //Checking if square is alread marked or not
@@ -122,8 +115,18 @@ const squareNotMarked = (event) => {
     }
 }
 
-//Create and Array of were each player has played
+//Marking the empty squares
+const markSquare = (event, symbol) => {
+    boardArray[event.id - 1] = symbol;
+    event.innerHTML = symbol;
+    event.style.fontSize = "5rem";
+}
+
+//Create and Array which square is maked by which player
 const squaresPlayedByCurrentPlayer = (player) => {
+    if(tilesClicked < 5){
+        return;
+    }
     let tilesPlayed = [];
     if(player === 'player'){
         let index = boardArray.indexOf(playerSymbol) 
@@ -131,36 +134,35 @@ const squaresPlayedByCurrentPlayer = (player) => {
             tilesPlayed.push(index);
             index = boardArray.indexOf(playerSymbol, index + 1) 
         }
-        console.log(`players moves ${tilesPlayed}`)
-        checkForWin(tilesPlayed);
     } else {
         let index = boardArray.indexOf(computerSymbol)
         while(index != -1) {
             tilesPlayed.push(index);
             index = boardArray.indexOf(computerSymbol, index + 1)
         }
-        console.log(`computers moves ${tilesPlayed}`)
-        checkForWin(tilesPlayed);
     }
+    return tilesPlayed
 }
 
-//Iterator to check if any winningCombo is in the array of spots played
-//WORK IN PROGRESS
-const checkForWin = (array) => {
-    let forTheWin = winningCombos.filter(element => {
-        for(let i = 0; i < element.length; i++){
-            if(array.includes(element[i])){
-                console.log(element[i])
+//RETURNS a winning array from currentPlayer's moves
+/////////DOES NOT FUCKING WORK AM I RETARDED THE STRUGGLE IT SHOULD BE THIS HARD
+const checkForWin = (tileArray) => {
+    let matching = 0;
+    for(let i = 0; i < winningCombos.length; i++){
+        for(let j = 0; j < winningCombos[i].length; j++){
+            if(tileArray.includes(winningCombos[i][j])){
+                matching++;
+            } else {
+                i++
+            }
+            if(matching == 3){ 
+                console.log(winningCombos[i])
+                return winningCombos[i];
             }
         }
-    });
-
-    if(forTheWin.length > 2){
-        console.log(forTheWin)
+        matching = 0;
     }
-    else {
-        console.log('IDFK')
-    }
+    return null;
 }
 
 
