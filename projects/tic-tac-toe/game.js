@@ -97,7 +97,7 @@ const gamePlay = event => {
             boardArray[event.target.id - 1] = playerSymbol;
             event.target.innerHTML = playerSymbol;
             event.target.style.fontSize = "5rem";
-            checkForWinner(currentPlayer);
+            squaresPlayedByCurrentPlayer(currentPlayer);
             currentPlayer = "computer";
         }
     } else {
@@ -106,13 +106,14 @@ const gamePlay = event => {
             boardArray[event.target.id - 1] = computerSymbol;
             event.target.innerHTML = computerSymbol;
             event.target.style.fontSize = "5rem";
-            checkForWinner(currentPlayer);
+            squaresPlayedByCurrentPlayer(currentPlayer);
             currentPlayer = "player";
         }
     }
     isItATie();
 }
 
+//Checking if square is alread marked or not
 const squareNotMarked = (event) => {
     if(typeof boardArray[event.id - 1] === "number") {
         return true;
@@ -121,7 +122,8 @@ const squareNotMarked = (event) => {
     }
 }
 
-const checkForWinner = (player) => {
+//Create and Array of were each player has played
+const squaresPlayedByCurrentPlayer = (player) => {
     let tilesPlayed = [];
     if(player === 'player'){
         let index = boardArray.indexOf(playerSymbol) 
@@ -130,8 +132,7 @@ const checkForWinner = (player) => {
             index = boardArray.indexOf(playerSymbol, index + 1) 
         }
         console.log(`players moves ${tilesPlayed}`)
-        //NEED TO CHECK IF ANY OF THE WINNING COMBOS HAVE BEEN ACHIEVED HERE
-        //IN SIDE THE IF/ELSE STATEMENT
+        checkForWin(tilesPlayed);
     } else {
         let index = boardArray.indexOf(computerSymbol)
         while(index != -1) {
@@ -139,8 +140,26 @@ const checkForWinner = (player) => {
             index = boardArray.indexOf(computerSymbol, index + 1)
         }
         console.log(`computers moves ${tilesPlayed}`)
-        //NEED TO CHECK IF ANY OF THE WINNING COMBOS HAVE BEEN ACHIEVED HERE
-        //IN SIDE THE IF/ELSE STATEMENT
+        checkForWin(tilesPlayed);
+    }
+}
+
+//Iterator to check if any winningCombo is in the array of spots played
+//WORK IN PROGRESS
+const checkForWin = (array) => {
+    let forTheWin = winningCombos.filter(element => {
+        for(let i = 0; i < element.length; i++){
+            if(array.includes(element[i])){
+                console.log(element[i])
+            }
+        }
+    });
+
+    if(forTheWin.length > 2){
+        console.log(forTheWin)
+    }
+    else {
+        console.log('IDFK')
     }
 }
 
