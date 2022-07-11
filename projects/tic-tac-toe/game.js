@@ -63,11 +63,9 @@ const whoseTurn = () => {
     if(first === 0) {
         whoGoesFirst.innerHTML = "COMPUTER";
         currentPlayer = "computer";
-        // console.log(`It's the computer's turn`)
     } else {
         whoGoesFirst.innerHTML = "PLAYER";
         currentPlayer = "player";
-        // console.log(`It's the players turn`)
     }
     whoGoesFirst.style.width = "170px";
     whoGoesFirst.style.height = "40px"
