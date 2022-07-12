@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap');
 
+@keyframes gentle-shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+  @keyframes grow {
+    from {
+        width: 1rem;
+        height: auto;
+    }
+    to {
+        width: 6rem;
+        height: auto;
+    }
+  }
+  @keyframes shrink {
+    from {
+        width: 6rem;
+        height: auto;
+    }
+    to {
+        width: 0rem;
+        height: auto;
+    }
+  }
 
 /* GLOBAL */
 *{
@@ -86,9 +113,6 @@ nav li a{
 nav li:hover{
     text-decoration: underline;
 }
-/* nav li a:active{
-    color: rgba(245, 245, 245, 0.65);
-} */
 section {
     width: 90%;
     border-bottom: 2px solid rgb(175, 41, 41);
@@ -96,15 +120,34 @@ section {
 .back-to-top{
     display: none;
     position: fixed;
-    left: 3.25%;
-    top: 90%;
+    left: 2.75rem;
+    bottom: 12%;
     z-index: 100;
-    width: 4rem;
+    width: 6rem;
     height: auto;
     border: none;
     outline: none;
-    background-color: transparent;
+    /* background-color: transparent; */
     cursor: pointer;
+    animation: grow 1s ease-in-out;
+    
+}
+.shrink {
+    display: none;
+    position: fixed;
+    left: 2.75rem;
+    bottom: 12%;
+    z-index: 100;
+    width: 6rem;
+    height: auto;
+    border: none;
+    outline: none;
+    /* background-color: transparent; */
+    animation: shrink 1s ease-in-out;
+}
+
+.back-to-top img{
+    animation: gentle-shake 4s ease-in-out infinite;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 

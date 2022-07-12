@@ -1,8 +1,10 @@
-let button =  document.getElementById('back-to-top');
+const button =  document.getElementById('back-to-top');
+let hasScrolled = false;
 
 const buttonAppears = () => {
-    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+    if(document.body.scrollTop > 400 || document.documentElement.scrollTop > 400){
         button.style.display = "block";
+        
     }
     else {
         button.style.display = "none";
