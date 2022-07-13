@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css" type="text/css">
+    <!-- SCRIPTS -->
     <script src="https://kit.fontawesome.com/c239ea7dcb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
     <title>Elenors Artisian Cupcakes</title>
 </head>
 <body>
@@ -13,7 +17,7 @@
         <div class="image-container"></div>
         <div class="text-wrapper">
             <h1>Elenor's Artisian Cupcake</h1>
-            <h3>Sample the wonder today!</h3>   
+            <h3>1357 North Ashwood Ave.</h3>   
         </div>  
     </header>
     <nav>
@@ -39,7 +43,7 @@
                 <div class="card-container">
                     <div class="all-special-cards special-1">
                         <div class="special-1-image image-container">
-                            <img src="../cupcake-website/resources/pictures/special-chocolate-supreme.jpg" alt="super chocolate-y cupcake">
+                            <img src="../cupcake-website/resources/pictures/special-chocolate-supreme-sml.jpg" alt="super chocolate-y cupcake">
                         </div>
                         <div class="special-text">
                             <h4>Special Chocolate Supreme</h4>
@@ -48,7 +52,7 @@
                     </div>
                     <div class="all-special-cards special-2">
                         <div class="special-2-image image-container">
-                            <img src="../cupcake-website/resources/pictures/special-healthy-brand.jpg" alt="bran cupcake with wipped cream">
+                            <img src="../cupcake-website/resources/pictures/special-healthy-brand-sml.jpg" alt="bran cupcake with wipped cream">
                         </div>
                         <div class="special-text">
                             <h4>Healthy Bran</h4>
@@ -57,7 +61,7 @@
                     </div>
                     <div class="all-special-cards special-3">
                         <div class="special-3-image image-container">
-                            <img src="../cupcake-website/resources/pictures/special-late-night-surprise.jpg" alt="late night surprise cupcake">
+                            <img src="../cupcake-website/resources/pictures/special-late-night-surprise-sml.jpg" alt="late night surprise cupcake">
                         </div>
                         <div class="special-text">
                             <h4>Late Night Surprise</h4>
@@ -66,7 +70,7 @@
                     </div>
                     <div class="all-special-cards special-4">
                         <div class="special-4-image image-container">
-                            <img src="../cupcake-website/resources/pictures/special-lavender.jpg" alt="lavender white chocolate flavored cupcake">
+                            <img src="../cupcake-website/resources/pictures/special-lavender-sml.jpg" alt="lavender white chocolate flavored cupcake">
                         </div>
                         <div class="special-text">
                             <h4>Lavender and white chocolate</h4>
@@ -75,7 +79,7 @@
                     </div>
                     <div class="all-special-cards special-5">
                         <div class="special-5-image image-container">
-                            <img src="../cupcake-website/resources/pictures/special-strawberry-pepper.jpg" alt="strawberry and hotpepper flavored cupcake">
+                            <img src="../cupcake-website/resources/pictures/special-strawberry-pepper-sml.jpg" alt="strawberry and hotpepper flavored cupcake">
                         </div>
                         <div class="special-text">
                             <h4>Strawberry pepper</h4>
@@ -83,18 +87,20 @@
                         </div>
                     </div>
                 </div>
-                <div id="menu"></div><!--This is here so the menu section in center when link is clicked-->
+                <div id="menu"></div><!--THIS IS JUST SO THAT THE MENU SECTION LOADS FRONT AND CENTER WHEN LINK IS CLICKED -->
             </section> <!-- End specials-->
-            <section class="menu">
+            <section class="menu"><!--MENU SECTION START-->
                 <div class="left-side">
                     <div class="menu-header">
                         <h2>Menu</h2>
-                        
                     </div>
                     <div class="menu-text">
-                        <p>Maybe the specials don't tickle your fancy, that's okay.</p> 
+                        <p>Maybe the specials don't tickle your fancy... </p>
+                        <p>That's okay!</p> 
                         <p>There is a flavor for every one!</p>
-                        <p>Flavors are first come first serve!</p>
+                        <br>
+                        <span><p>Flavors are first come first serve!</p></span>
+                        <br>
                         <p>Once flavors run out they are done for the day!</p>
                         <p>So, dont' miss out on your favorite flavor and visit us soon!</p>
                     </div> 
@@ -179,7 +185,7 @@
                 </div>
                 <div class="about-header">
                     <h2>Our Story</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa fugiat, quos doloribus cumque esse velit ipsum in cupiditate odio, mollitia impedit, atque consequuntur quae! Porro obcaecati natus vel odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, aut? Veniam esse sint atque tenetur illo voluptates, cum expedita quae culpa minima omnis dolores impedit quia repellendus pariatur ab quam.</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione ipsa fugiat, quos doloribus cumque esse velit ipsum in cupiditate odio, mollitia impedit, atque consequuntur quae! Porro obcaecati natus vel odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, aut? Veniam esse sint atque tenetur illo voluptates, cum expedita quae culpa minima omnis dolores impedit quia repellendus pariatur ab quam.Porro obcaecati natus vel odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, aut? Veniam esse sint atque tenetur illo voluptates, cum expedita quae culpa minima omnis dolores impedit quia repellendus pariatur ab quam.</p>
                 </div>
             </section>
             <section class="contact" id="contact">
@@ -192,18 +198,16 @@
                         <a href="http://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
                         <a href="http://www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
                         <a href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                        <div>
+                        <div class="phone">
                             <i class="fa-solid fa-phone"></i>
                             <p>(805)867-5309</p>
                         </div>
                     </div>
-                    <div class="map" id="map">
-                        <img src="https://api.maptiler.com/maps/streets/static/-119.2433317,34.2763079,14/500x500.png?key=fdWM5OGnglOD95PWNb3g" alt="map of location">
-                    </div>
+                    <div class="map" id="map"></div><!--THIS IS THE MAP-->
                 </div>
                 
                 <div class="contact-form">
-                    <form id="contact-form">
+                    <form id="contact-form" action="index.html#contact">
                         <label for="name">Name</label><br>
                         <input type="text" name="name" id="name"><br>
                         <label for="phone">Phone Number</label><br>
@@ -213,11 +217,15 @@
                         <input type="submit" value="Submit">
                     </form>
                     <br>
-                    <textarea rows="10" cols="50" name="message" form="contact-form" placeholder="Leave me a message"></textarea>
+                    <textarea rows="11" cols="50" name="message" form="contact-form" placeholder="Leave me a message"></textarea>
                 </div>
             </section>
+            <div class="created-by">
+                <p>Created with <i class="fa-solid fa-heart"></i> by Kimberly Lancaster 2022</p>
+            </div>
         </div><!--End MAIN white box div--> 
     </main>
+    <footer></footer>
     <script src="./resources/js/index.js"></script>
 </body>
 </html>

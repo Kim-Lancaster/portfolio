@@ -2,6 +2,9 @@ Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States. 
 
+7/12/22
+Well I haven't written an update in probably 3 weeks!  I'm terrible.  But, I have been updating and working (and updating and working...).  Yesterday and today I worked mostly on the cupcake website.  I added a 'back to the top' icon that appears when you scroll down.  It is animated so that it catches the eye.  I added a pharallax to the hero image.  I added an unstyled map, by open tiles, to the contact section.  I created a footer, that's not in a footer tag, to add the created by section.  I increased the space between the nav and the start of the specials section.  I fixed the specials pictures so that they are not distorted.  Modified the layout of some of the paragraphs. Lastly, I updated the about me section to have a better flow.
+ 
 6/29/22
 I haven't updated in a week, but I have not been idle!  I switched gears after running into the wall with my tic-tac-toe project.  I have been working on my factitious cupcake website trying to get that finished.  So far I have added more content as well as breakpoints for the header and nav.  That might not seem like a lot for the week but I have also been studying.  I finished my course on responsive design and then was able to implement it on multiple sites.  Next up: Node.js and CSS animations.
 
