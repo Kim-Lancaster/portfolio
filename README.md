@@ -1,6 +1,10 @@
 Hello and Welcome to my website and portfolio!
 My name is Kim,
 I am a front-end developer based in the United States. 
+Below is a dev log starting from when I decided to get ready to apply to jobs until today!
+
+7/13/22
+Did more work on the cupcake website. I modified the 'to top' button so that it says to top and matches the color palette.  The text in the about section was lowered so that there is less dead space.  Text was made bigger in the classes section for readability/  Variable were added to the css. And some attribute values were changes so that the site was more responsive.  I have begun adding in media queries.
 
 7/12/22
 Well I haven't written an update in probably 3 weeks!  I'm terrible.  But, I have been updating and working (and updating and working...).  Yesterday and today I worked mostly on the cupcake website.  I added a 'back to the top' icon that appears when you scroll down.  It is animated so that it catches the eye.  I added a pharallax to the hero image.  I added an unstyled map, by open tiles, to the contact section.  I created a footer, that's not in a footer tag, to add the created by section.  I increased the space between the nav and the start of the specials section.  I fixed the specials pictures so that they are not distorted.  Modified the layout of some of the paragraphs. Lastly, I updated the about me section to have a better flow.

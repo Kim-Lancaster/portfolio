@@ -9,15 +9,23 @@
   }
   @keyframes grow {
     from {
-        width: 1rem;
+        width: 1%;
         height: auto;
     }
     to {
-        width: 6rem;
+        width: 5%;
         height: auto;
     }
   }
 
+  :root{
+    --opaque65: rgba(245, 245, 245, 0.65);
+    --opaque20: rgba(245, 245, 245, 0.20);
+    --light-red: rgb(175, 41, 41);
+    --dark-red: rgb(43, 5, 5);
+    --border-2px: 2px solid var(--light-red);
+    --border-1px: 1px solid var(--light-red);
+  }
 /* GLOBAL */
 *{
     box-sizing: border-box;
@@ -27,14 +35,18 @@
     font-size: 16px;
 }
 body {
-    background-color: rgb(43, 5, 5);
+    background-color: var(--dark-red)
+}
+section {
+    width: 90%;
+    border-bottom: var(--border-2px)
 }
 h2 {
     font-size: 3.5rem;
     font-weight: bold;
 }
 h3 {
-    font-size: 2rem;
+    font-size: 2vw;
     white-space: nowrap;
 }
 img {
@@ -44,7 +56,7 @@ li {
     list-style: none;
 }
 i {
-    color: rgb(43, 5, 5);
+    color: var(--dark-red);
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
@@ -70,13 +82,13 @@ header .image-container{
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: rgba(245, 245, 245, 0.60);
-    color:rgb(71, 7, 7);
+    background-color: var(--opaque65);
+    color:rgb(71, 7, 7); /*Looks the same as var(--dark-red) against the opaque banner*/
     position: absolute;
     top: 60%;
 }
 h1 {
-    font-size: 7rem;
+    font-size: 8vw;/*7rem;*/
     white-space: nowrap;
 
 }
@@ -95,7 +107,7 @@ ul {
 nav li a{
     display: inline;
     padding: 0 1.25rem;
-    color: rgb(175, 41, 41);
+    color: var(--light-red);
     font-size: 2rem;
     white-space: nowrap;
     text-decoration: none;
@@ -103,21 +115,17 @@ nav li a{
 nav li:hover{
     text-decoration: underline;
 }
-section {
-    width: 90%;
-    border-bottom: 2px solid rgb(175, 41, 41);
-}
 .back-to-top{
     display: none;
     position: fixed;
-    left: 2.75rem;
+    left: 2.5%;
     bottom: 12%;
     z-index: 100;
-    width: 6rem;
+    width: 5%;
     height: auto;
     border: none;
     outline: none;
-    /* background-color: transparent; */
+    background-color: transparent;
     cursor: pointer;
     animation: grow 1s ease-in-out;
     
@@ -129,7 +137,7 @@ section {
 
 /* MAIN CONTENT */
 main {
-    color: rgb(43, 5, 5);
+    color: var(--dark-red);
     display: flex;
     justify-content: center;
 
@@ -141,11 +149,8 @@ main {
     align-items: center;
     width: 90%;
     height: auto;
-    background-color: rgba(245, 245, 245, 0.65);
+    background-color: var(--opaque65);
     border-radius: 30px;
-}
-.main-white-box li {
-    font-size: 1.25rem;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
@@ -158,6 +163,10 @@ main {
     gap: 10px;
     padding-bottom: 10%;
     padding-top: 3%;
+}
+.specials li {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 .card-container {
     margin-top: 5%;
@@ -172,14 +181,14 @@ main {
     max-height: 200px;
     display: flex;
     flex-direction: row;
-    border: 2px solid rgb(175, 41, 41);
+    border: var(--border-2px);
     border-radius: 30px;
     overflow: hidden;
-    background-color: rgba(245, 245, 245, 0.20);
+    background-color: var(--opaque20);
 }
 .all-special-cards h4 {
     font-size: 1.25rem;
-    border-bottom: 1px solid rgb(175, 41, 41);
+    border-bottom: var(--border-1px);
 }
 .special-text{
     align-self: center;
@@ -188,6 +197,9 @@ main {
 .special-text h4,
 .special-text p {
     text-align: center;
+}
+.all-special-cards .special-text{
+    width: 120%;
 }
 .all-special-cards .image-container {
     display: flex;
@@ -213,7 +225,8 @@ main {
     padding-bottom: 10%;
 }
 .menu-text p{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 200%;
 }
 .menu-text span{
     font-weight: bold;
@@ -227,10 +240,11 @@ main {
     gap: 1.5rem;
 }
 .right-side li {
+    font-size: 1.25rem;
     font-weight: bold;
 }
 .right-side h4 { /*flavor base*/
-    border-bottom: 1px solid rgb(175, 41, 41);
+    border-bottom: var(--border-1px);
 }
 .right-side p { /*menu items*/
     margin: 1rem auto;
@@ -239,8 +253,8 @@ main {
     display: flex;
     gap: 2rem;
     padding: 2rem;
-    background-color: rgba(245, 245, 245, 0.20);
-    border: 2px solid rgb(175, 41, 41);
+    background-color: var(--opaque20);
+    border: var(--border-2px);
     border-radius: 30px;
 }
 /* CLASSES */
@@ -262,17 +276,17 @@ main {
 }
 .class-examples {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: end;
 }
 .class-examples .image-container {
-    border: 2px solid rgb(175, 41, 41);
+    border: var(--border-2px);
     border-radius: 30px;
     overflow: hidden;
     object-fit: cover;
     margin: 2%;
-    background-color: rgba(245, 245, 245, 0.20);
+    background-color: var(--opaque20);
 }
 .class-examples img {
     max-height: 400px;
@@ -282,11 +296,16 @@ main {
     text-align: center;
 }
 .class-summary {
-    width: 50%;
+    width: 60%;
+}
+.class-summary p{
+    font-size: 1.25rem;
+    line-height: 200%;
+    
 }
 
 /* ABOUT */
-.about {
+.about { /*Whole section*/
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -295,19 +314,22 @@ main {
     padding-top: 5%;
     padding-bottom: 5%;
 }
-.about-header {
-    align-self: start;
-    width: 45%;
-}
-.about .image-container{
+.about .image-container{/*left side*/
     width: 30%;
 }
 .about img {
-    border: 2px solid rgb(175, 41, 41);
+    border: var(--border-2px);
     border-radius: 30px;
 }
+.about-header {/*right side*/
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 45%;
+}
 .about p{
-    font-size: 1.24rem;
+    font-size: 1.25rem;
+    line-height: 200%;
     
 }
 /* CONTACT */
@@ -338,7 +360,7 @@ main {
     justify-content: flex-end;
 }
 .map{
-    border: 2px solid rgb(175, 41, 41);
+    border: var(--border-2px);
     border-radius: 30px;
     overflow: hidden;
     height: 400px;
@@ -360,10 +382,10 @@ textarea{
 }
 input,
 textarea{
-    border: 2px solid rgb(175, 41, 41);
+    border: var(--border-2px);
     border-radius: 10px;
     padding: 0 2%;
-    background-color: rgba(245, 245, 245, 0.60);
+    background-color: var(--opaque65);
     resize: none;
 }
 input:focus,
@@ -378,7 +400,7 @@ textarea:focus{
     font-size: .5rem;
 }
 .created-by i{
-    color: rgb(175, 41, 41);
+    color: var(--light-red);
 }
 
 /* FOOTER - just for aesthetics */
@@ -387,15 +409,38 @@ footer{
 }
 /* ***************BREAKPOINTS****************************
 /* laptop */
-@media only screen and (max-width: 1500px){
-    h1 {
-        font-size: 5rem;
+@media only screen and (max-width: 1510px){
+    *{
+        font-size: 15px;
     }
-    h3{
-        font-size: 1.5rem;
+    .all-special-cards{
+        max-width: 500px;
+        max-height: 175px;
     }
-    li{
-        font-size: 1.5rem;
+}
+/*breakpoint*/
+@media only screen and (max-width: 1350px){
+   .public,
+   .private,
+   .corporate,
+   .one-on-one {
+    flex: 20%; /*DO MORE WORK ON THIS!!!*/
+   } 
+}
+/*breakpoint*/
+@media only screen and (max-width: 1260px){
+    *{
+        font-size: 14px;
+    }
+    .all-special-cards{
+        max-width: 400px;
+        max-height: 150px;
+    }
+    .menu-text{
+        padding-right: 5%;
+    }
+    .right-side p{
+        font-size: 1.10rem;
     }
 }
 /* tablet landscape */
@@ -403,57 +448,17 @@ footer{
     header .image-container{
         background-attachment: scroll;   /*turn off parallaz for mobile */
     }
-    h1 {
-        font-size: 4rem;
-    }
-    h3{
-        font-size: 1rem;
-    }
-    li{
-        font-size: 1rem;
-    }
-
 }
 /* tablet */
 @media only screen and (max-width: 768px){
-    h1{
-        font-size: 3rem;
-    }
-    h3{
-        font-size: .75rem;
-    }
-    li{
-        font-size: .75rem;
-    }
+
 }
 /* phone */
 @media only screen and (max-width: 560px){
-    h1{
-        font-size: 2rem;
-    }
-    h3{
-        font-size: .75rem;
-    }
-    .hero{
-        height: 80vh;
-        width: auto;
-    }
-    .text-wrapper {
-        height: 15vh;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-    nav {
-        display: none;
-    }
+
 }
 /* super narrow phones like galaxy fold */
 @media only screen and (max-width: 375px){
-    h1{
-        font-size: 1.45rem;
-    }
-    h3{
-        font-size: .60rem;
-    }
+
 }
 
