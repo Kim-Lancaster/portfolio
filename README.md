@@ -3,6 +3,9 @@ My name is Kim,
 I am a front-end developer based in the United States. 
 Below is a dev log starting from when I decided to get ready to apply to jobs until today!
 
+7/15/22
+Worked on nothing but breakpoints today and yesterday.  It is proving to be a arduous under taking.  I should bave been more conscientious of how things will shrink next time.  But, I have learned A LOT, so, that's a plus.  Hopefully I an get it all done by the end of the week on 2 days.
+
 7/13/22
 Did more work on the cupcake website. I modified the 'to top' button so that it says to top and matches the color palette.  The text in the about section was lowered so that there is less dead space.  Text was made bigger in the classes section for readability/  Variable were added to the css. And some attribute values were changes so that the site was more responsive.  I have begun adding in media queries.
 
