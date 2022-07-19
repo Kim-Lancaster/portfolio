@@ -47,7 +47,7 @@ h1 {
 
 }
 h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 h3 {
@@ -118,6 +118,7 @@ nav li a{
 nav li:hover{
     text-decoration: underline;
 }
+/* BACK TO TOP BUTTON */
 .back-to-top{
     display: none;
     position: fixed;
@@ -135,6 +136,10 @@ nav li:hover{
 }
 .back-to-top img{
     animation: gentle-shake 4s ease-in-out infinite;
+}
+/*HIDDEN NAV*/
+.hidden-nav{
+    display: none;
 }
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
@@ -419,7 +424,7 @@ footer{
     height: 3rem;
 }
 /* ***************BREAKPOINTS****************************
-/* laptop */ /*LOOKS GOOD*/
+/* laptop */
 @media only screen and (max-width: 1510px){
     *{
         font-size: 15px;
@@ -432,7 +437,7 @@ footer{
         line-height: 110%;
     }
 }
-/*breakpoint*/ /*LOOKS GOOD*/
+/*breakpoint*/
 @media only screen and (max-width: 1350px){
     *{
         font-size: 14px;
@@ -457,10 +462,24 @@ footer{
     height: 375px;
    }
 }
-/*breakpoint*/ /*LOOKS GOOD*/
+/*breakpoint*/
 @media only screen and (max-width: 1260px){
     *{
         font-size: 14px;
+    }
+    @keyframes grow {
+        from {
+            width: 1%;
+            height: auto;
+        }
+        to {
+            width: 6%;
+            height: auto;
+        }
+      }
+    .back-to-top {
+        left: 2.25%;
+        width: 6%;
     }
     .all-special-cards{
         max-width: 475px;
@@ -476,7 +495,7 @@ footer{
         font-size: 1.1rem;
     }
 }
-/*breakpoint*/ /*LOOKS GOOD*/
+/*breakpoint*/
 @media only screen and (max-width: 1200px){
     *{
         font-size: 13px;
@@ -495,10 +514,24 @@ footer{
         height: 325px;
        }
 }
-/* tablet landscape */ /*LOOKS GOOD*/
+/* tablet landscape */
 @media only screen and (max-width: 1024px){
     *{
         font-size: 12px;
+    }
+    @keyframes grow {
+        from {
+            width: 1%;
+            height: auto;
+        }
+        to {
+            width: 7%;
+            height: auto;
+        }
+      }
+    .back-to-top {
+        left: 1.75%;
+        width: 7%;
     }
     .contact-header {
         width: 35%;
@@ -507,8 +540,11 @@ footer{
         height: 325px;
        }
 }
-/*breakpoint*/ /*LOOKS GOOD*/
+/*breakpoint*/
 @media only screen and (max-width: 1015px){
+    h3{
+        font-size: 3vw;
+    }
     .all-special-cards{
         max-width: 350px;
         max-height: 175px;
@@ -518,13 +554,26 @@ footer{
     }
     .classes .image-container {
         min-width: 300px;
-        gap: 10rem;
     }
 }
 /*breakpoint*/ /*CHANGE TO VERTICAL LAYOUT HERE*/
 @media only screen and (max-width: 900px){
     *{
         font-size: 13px;
+    }
+    @keyframes grow {
+        from {
+            width: 1%;
+            height: auto;
+        }
+        to {
+            width: 8%;
+            height: auto;
+        }
+      }
+    .back-to-top {
+        left: 1.35%;
+        width: 8%;
     }
     .all-special-cards{
         max-width: 500px;
@@ -616,9 +665,6 @@ footer{
     h1{
         font-size: 8.5vw;
     }
-    h2 {
-        font-size: 3rem;
-    }
     .hero{
         height: 75vh;
     }
@@ -628,17 +674,282 @@ footer{
     
 }
 /*breakpoint*/
-@media only screen and (max-width: 692px){
-    *{
-        font-size: 13px;
+@media only screen and (max-width: 755px){
+    @keyframes grow {
+        from {
+            width: 1%;
+            height: auto;
+        }
+        to {
+            width: 9%;
+            height: auto;
+        }
+      }
+    .back-to-top {
+        left: 1%;
+        width: 9%;
+    }
+    .classes .image-container {
+        max-width: 200px;
+    }
+    .one-on-one h4{
+        font-size: 1.25rem;
+    }
+}
+/*breakpoint*/
+@media only screen and (max-width: 692px){ /*HEIGHT PROBLEMS HERE AND SMALLER*/
+    h1{
+        font-size: 10vw;
+        white-space: normal;
+        text-align: center;
+    }
+    .text-wrapper{
+        top:50%
+    }
+    .hero{
+        height: 65vh;
+    }
+    .text-wrapper h3 {
+        font-size: 3vw;
+    }
+    .specials h2 {
+        text-align: center;
+    }
+    .prices li{
+        margin: auto 3%;
+    }
+    .class-header h2{
+        text-align: center;
     }
 }
 /* phone */
 @media only screen and (max-width: 560px){
+    .hero{
+        height: 50vh;
+    }
+    header .image-container {
+        background-position: bottom;
+    }
+    nav{
+        display: none;
+    }
+    /*HIDDEN NAV BAR - HAMBURGER MENU*/
+    .hidden-nav{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+        height: 100px;
+    }
+    .hidden-nav .menu {
+        position: relative;
+        width: 90%;
+    }
+    .hidden-nav button{
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: var(--dark-red);
+        color: var(--light-red);
+        border: var(--border-2px);
+        outline: none;
+        border-radius: 15px;
+    }
+    .hidden-nav .menu ul{
+        position: absolute;
+        top: 53%;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        border: var(--border-2px);
+        border-radius: 15px;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.4s ease
+    }
+    .hidden-nav .menu li{
+        background:var(--dark-red);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3%;
+    }
 
+    .hidden-nav .menu a{
+        font-size: 1.5rem;
+        color: var(--opaque65);
+        text-decoration: none;
+    }
+
+    .hidden-nav .menu button:focus + ul{
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(10px);
+    }
+
+    .hidden-nav .menu ul li:focus{
+        background: var(--light-red);
+    }
+    /* back to top */
+    @keyframes grow {
+        from {
+            width: 1%;
+            height: auto;
+        }
+        to {
+            width: 10%;
+            height: auto;
+        }
+      }
+      .back-to-top {
+        width: 10%;
+        left: .5%;
+      }
+    /* specials */
+    .specials ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3%;
+    }
+    .specials ul li{
+        padding-bottom: 3%;
+    }
+    .all-special-cards {
+        flex-direction: column;
+        max-width: 200px;
+        max-height: 375px;
+    }
+    .card-container{
+        margin-top: 0;
+    }
+    .all-special-cards .image-container{
+        height: 40%;
+    }
+    .all-special-cards .special-text{
+        height: 100%;
+        width: 90%;
+        margin-top: 15%;
+    }
+    /* menu */
+    .prices ul{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3%;
+    }
+    .prices ul li{
+        padding-bottom: 3%;
+    }
+    /* menu and classes */
+    .menu p,
+    .classes p,
+    .menu-grid{
+        text-align: center;
+    }
+    /* classes */
+    .class-examples{
+        gap: 1rem;
+    }
+    /* about */
+    .about .image-container {
+        width: 70%;
+    }
+    /* contacts */
+    .contact-header,
+    .contact-form{
+        width: 75%;
+    }
 }
-/* super narrow phones like galaxy fold */
-@media only screen and (max-width: 375px){
-
+/* breakpoint*/
+@media only screen and (max-width: 518px){
+    *{
+        font-size: 13px;
+    }
+    h3{
+        font-size: 1.25rem;
+    }
+    /* back to top */
+    @keyframes grow {
+        from {
+            width: 1%;
+            height: auto;
+        }
+        to {
+            width: 13%;
+            height: auto;
+        }
+        }
+        .back-to-top {
+        width: 13%;
+        left: .5%;
+        }
+    /* specials */
+    .all-special-cards{
+        min-width: 250px;
+        min-height: 410px;
+    }
+    .all-special-cards .image-container {
+        height: 50%;
+    }
+    .special-1-image img,
+    .special-2-image img{
+        object-position: 80% 80%;
+    }
+    .special-4-image img{
+        object-position: 50% 40%;
+    }
+    /* menu */
+    .menu-grid{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /* about */
+    .about{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }   
 }
-
+@media only screen and (max-width: 340px){
+    *{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 10vw;
+    }
+    h3{
+        font-size: 4vw;
+    }
+    .hidden-nav .menu ul{
+        top: 56%
+    }
+    /* back to top */
+    @keyframes grow {
+        from {
+            width: 1%;
+            height: auto;
+        }
+        to {
+            width: 16%;
+            height: auto;
+        }
+        }
+        .back-to-top {
+        width: 16%;
+        left: .5%;
+        }
+    .all-special-cards {
+        min-width: 200px;
+    }
+    .classes .image-container{
+        min-width: 200px;
+    }
+    .classes .image-container h4 {
+        font-size: 1.1rem;
+    }
+    
+}

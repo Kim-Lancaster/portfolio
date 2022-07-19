@@ -3,6 +3,9 @@ My name is Kim,
 I am a front-end developer based in the United States. 
 Below is a dev log starting from when I decided to get ready to apply to jobs until today!
 
+7/18/22
+I have been working on the cupcake website for the last 3 days.  It is 99% finished, or as finished as it's going to get.  I would like to add in a card flip animation, a breakpoint for a shorter height and go through and try to clean up any redundant code.  But other than that I can finally put it to rest, thank god!  Next up, finishing that f*cking tic-tac-toe game.
+
 7/15/22
 Worked on nothing but breakpoints today and yesterday.  It is proving to be a arduous under taking.  I should bave been more conscientious of how things will shrink next time.  But, I have learned A LOT, so, that's a plus.  Hopefully I an get it all done by the end of the week on 2 days.
 
