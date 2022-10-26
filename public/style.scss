@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+//Variables
+$color-home: #1a132b;
+$color-nav: #bce874;
+$color-about: #c5a452;
+$background-main: #251e38;
+$background-nav: #372e4f8e;
+$background-about: #2f3a52c9;
+$title-font: 'Abril Fatface', cursive;
+$regular-font: 'Ubuntu', sans-serif;
+
+//mixins
+@mixin flex-rules($direction, $justify, $align, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+@mixin text-rules($size, $family, $color, $letters, $word, $break, $align){
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+    letter-spacing: $letters;
+    word-spacing: $word;
+    word-break: $break;
+    text-align: $align;
+}
+//Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+body {
+    background-color: $background-main;
+    font-family: $regular-font;
+}
+.background-image {
+    @include flex-rules(column, center, center, no-wrap);
+    background-image: url("../src/media/background-with-animals.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 97% 102%;
+    background-size: cover;
+    height: 100%;
+}
+.navbar {
+    @include flex-rules(row, center, center, no-wrap);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: $background-nav;
+    ul {
+        @include flex-rules(row, space-between, center, no-wrap);
+        width: 50%;
+        li {
+            list-style: none;
+            a {
+               font-size: 1.25rem;
+               text-decoration: none;
+               color: $color-nav;
+               font-weight: 500;
+            }
+            
+        }
+    }
+}
+#home {
+    @include flex-rules(column, start, center, no-wrap);
+    min-height: 100vh;
+    .my-name {
+        @include text-rules(10rem, $title-font, $color-home, 4px, normal, normal, center);
+        margin-top: 15%;
+    }
+    .title {
+        @include text-rules(3rem, $title-font, $color-home, 2px, normal, normal, center);
+    }
+    .hobby {
+        @include text-rules(2rem, $title-font, $color-home, 1px, normal, normal, center)
+    }
+}
+
+#about {
+    @include flex-rules(column, center, center, no-wrap);
+    width: 80%;
+    min-height: 100vh;
+    background-color: $background-about;
+    border-radius: 15px;
+    .title {
+        padding: 1%;
+        color: $color-about;
+        font-size: 2rem;
+    }
+    img {
+        border-radius: 50%;
+        width: 10rem;
+    }
+    p {
+        padding: 1%;
+        color: $color-about;
+        text-align: center;
+        width: 90%;
+    }
+}

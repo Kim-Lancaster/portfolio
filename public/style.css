@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+}
+
+body {
+  background-color: #251e38;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.background-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  background-image: url("../src/media/background-with-animals.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 97% 102%;
+  background-size: cover;
+  height: 100%;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #372e4f8e;
+}
+
+.navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 50%;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #bce874;
+  font-weight: 500;
+}
+
+#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  min-height: 100vh;
+}
+
+#home .my-name {
+  font-size: 10rem;
+  font-family: "Abril Fatface", cursive;
+  color: #1a132b;
+  letter-spacing: 4px;
+  word-spacing: normal;
+  word-break: normal;
+  text-align: center;
+  margin-top: 15%;
+}
+
+#home .title {
+  font-size: 3rem;
+  font-family: "Abril Fatface", cursive;
+  color: #1a132b;
+  letter-spacing: 2px;
+  word-spacing: normal;
+  word-break: normal;
+  text-align: center;
+}
+
+#home .hobby {
+  font-size: 2rem;
+  font-family: "Abril Fatface", cursive;
+  color: #1a132b;
+  letter-spacing: 1px;
+  word-spacing: normal;
+  word-break: normal;
+  text-align: center;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 80%;
+  min-height: 100vh;
+  background-color: #2f3a52c9;
+  border-radius: 15px;
+}
+
+#about .title {
+  padding: 1%;
+  color: #c5a452;
+  font-size: 2rem;
+}
+
+#about img {
+  border-radius: 50%;
+  width: 10rem;
+}
+
+#about p {
+  padding: 1%;
+  color: #c5a452;
+  text-align: center;
+  width: 90%;
+}
+/*# sourceMappingURL=style.css.map */
