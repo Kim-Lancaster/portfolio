@@ -4,9 +4,14 @@
 $color-home: #1a132b;
 $color-nav: #bce874;
 $color-about: #c5a452;
+//$color-projects: #a1485d;
+$color-projects: #88e992;
 $background-main: #251e38;
 $background-nav: #372e4f8e;
 $background-about: #2f3a52c9;
+//$background-projects: #bce874c9;
+$background-projects: #a1485dc9;
+$background-projects-buttons: #a1485d;
 $title-font: 'Abril Fatface', cursive;
 $regular-font: 'Ubuntu', sans-serif;
 
@@ -87,9 +92,10 @@ body {
 #about {
     @include flex-rules(column, center, center, no-wrap);
     width: 80%;
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: $background-about;
     border-radius: 15px;
+    margin-bottom: 5%;
     .title {
         padding: 1%;
         color: $color-about;
@@ -104,5 +110,69 @@ body {
         color: $color-about;
         text-align: center;
         width: 90%;
+    }
+}
+
+#projects {
+    @include flex-rules(column, center, center, no-wrap);
+    width: 80%;
+    min-height: 80vh;
+    background-color: $background-projects;
+    border-radius: 15px;
+    margin-bottom: 5%;
+    .title {
+        padding: 1%;
+        color: $color-projects;
+        font-size: 2rem;
+    }
+    .every-project-container {
+        @include flex-rules(row, center, center, wrap);
+        width: 90%;
+        border: 3px solid $color-projects;
+        border-radius: 15px;
+        margin: 2% auto;
+        h3 {
+            flex: 100%;
+            text-align: center;
+            padding: 1% 0;
+            color: $color-projects;
+            font-size: 1.5rem;
+        }
+        .left-side-project-card {
+            @include flex-rules(column, start, center, wrap);
+            flex: 40%;
+            padding: 1%;
+            img {
+                width: 15rem;
+                border-radius: 15px;
+                border: 2px solid $color-projects;
+            }
+            .projects-button-container {
+                @include flex-rules(row, space-around, center, wrap);
+                padding: 1%;
+                width: 50%;
+                button {
+                    white-space: nowrap;
+                    width: 100%;
+                    padding: 3px;
+                    background-color: $color-projects;
+                    color: $background-projects-buttons;
+                }
+            }
+        }
+        .right-side-project-card {
+            @include flex-rules(row, center, space-between, wrap);
+            flex: 60%;
+            height: 100%;
+            color: $color-projects;
+            padding: 2%;
+            p {
+                margin: 5% auto;
+            }
+            i {
+                font-size: 2rem;
+                margin: 1%;
+            }
+        }
     }
 }

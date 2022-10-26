@@ -158,9 +158,10 @@ body {
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
   width: 80%;
-  min-height: 100vh;
+  min-height: 80vh;
   background-color: #2f3a52c9;
   border-radius: 15px;
+  margin-bottom: 5%;
 }
 
 #about .title {
@@ -179,5 +180,154 @@ body {
   color: #c5a452;
   text-align: center;
   width: 90%;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 80%;
+  min-height: 80vh;
+  background-color: #a1485dc9;
+  border-radius: 15px;
+  margin-bottom: 5%;
+}
+
+#projects .title {
+  padding: 1%;
+  color: #88e992;
+  font-size: 2rem;
+}
+
+#projects .every-project-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  border: 3px solid #88e992;
+  border-radius: 15px;
+  margin: 2% auto;
+}
+
+#projects .every-project-container h3 {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  text-align: center;
+  padding: 1% 0;
+  color: #88e992;
+  font-size: 1.5rem;
+}
+
+#projects .every-project-container .left-side-project-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  padding: 1%;
+}
+
+#projects .every-project-container .left-side-project-card img {
+  width: 15rem;
+  border-radius: 15px;
+  border: 2px solid #88e992;
+}
+
+#projects .every-project-container .left-side-project-card .projects-button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1%;
+  width: 50%;
+}
+
+#projects .every-project-container .left-side-project-card .projects-button-container button {
+  white-space: nowrap;
+  width: 100%;
+  padding: 3px;
+  background-color: #88e992;
+  color: #a1485d;
+}
+
+#projects .every-project-container .right-side-project-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 60%;
+      -ms-flex: 60%;
+          flex: 60%;
+  height: 100%;
+  color: #88e992;
+  padding: 2%;
+}
+
+#projects .every-project-container .right-side-project-card p {
+  margin: 5% auto;
+}
+
+#projects .every-project-container .right-side-project-card i {
+  font-size: 2rem;
+  margin: 1%;
 }
 /*# sourceMappingURL=style.css.map */

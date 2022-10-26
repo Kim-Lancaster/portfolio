@@ -3,6 +3,7 @@ import Home from './Home'
 import Navbar from './Navbar';
 import "../../public/style.css"
 import About from './About';
+import Projects from './Projects';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className="background-image">
       <Navbar />
       <Home name="Kim Lancaster" title="Frontend Developer" />
-      <About title="About Me" />
+      <About />
+      <Projects />
     </div>
   )
 }
