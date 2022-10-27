@@ -1,9 +1,10 @@
 import React from 'react';
 import Home from './Home'
 import Navbar from './Navbar';
-import "../../public/style.css"
 import About from './About';
 import Projects from './Projects';
+import Contact from './Contact';
+import "../../public/style.css"
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Home name="Kim Lancaster" title="Frontend Developer" />
       <About />
       <Projects />
+      <Contact />
     </div>
   )
 }

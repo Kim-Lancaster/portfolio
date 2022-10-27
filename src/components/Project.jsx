@@ -3,26 +3,25 @@ import Button from "./Button";
 import Paragraph from "./Paragraph";
 import Icon from "./Icon";
 
-function Div(props){
+function Project(props){
     return(
     <div className="every-project-container">
-        <h3>{props.projectTitle}</h3>
         <div className="left-side-project-card">
-            
             <img src={props.image} alt={props.alt} />
             <div className="projects-button-container">
-                <Button btnClass="github" text="Github" link={props.link} />
-                <Button btnClass="live-site" text="Live site" link={props.link} />   
+                <Button btnClass="github" text="Github" link={props.githubLink} />
+                <Button btnClass="live-site" text="Live site" link={props.liveLink} />   
             </div>
         </div>
         <div className="right-side-project-card">
+            <h3>{props.projectTitle}</h3>
             <Paragraph text={props.text} />
-            <Icon icon={props.icon1} />
-            <Icon icon={props.icon2} />  
-            <Icon icon={props.icon3} />     
+            {props.icons.map(item => {
+                return <Icon icon={item.icon} iconName={item.iconName} />
+            })}  
         </div>
     </div>
     )
 }
 
-export default Div;
+export default Project;

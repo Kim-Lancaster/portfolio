@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-//Variables
+//////VARIABLES///////
+//Font colors
 $color-home: #1a132b;
 $color-nav: #bce874;
 $color-about: #c5a452;
-//$color-projects: #a1485d;
-$color-projects: #88e992;
+$color-projects: #cdcf6d;
+$color-projects-each: #2f3a52;
+$color-contact: #8fbda2;
+//Background colors
 $background-main: #251e38;
 $background-nav: #372e4f8e;
 $background-about: #2f3a52c9;
-//$background-projects: #bce874c9;
-$background-projects: #a1485dc9;
-$background-projects-buttons: #a1485d;
+$background-projects: #80406dc9;
+$background-projects-each: #cdcf6db7;
+$background-projects-buttons: #2f3a52;
+$background-contact: #b8664dc9;
+//fonts
 $title-font: 'Abril Fatface', cursive;
 $regular-font: 'Ubuntu', sans-serif;
 
@@ -89,89 +94,162 @@ body {
     }
 }
 
-#about {
-    @include flex-rules(column, center, center, no-wrap);
-    width: 80%;
-    min-height: 80vh;
-    background-color: $background-about;
-    border-radius: 15px;
-    margin-bottom: 5%;
-    .title {
-        padding: 1%;
-        color: $color-about;
-        font-size: 2rem;
-    }
-    img {
-        border-radius: 50%;
-        width: 10rem;
-    }
-    p {
-        padding: 1%;
-        color: $color-about;
-        text-align: center;
-        width: 90%;
-    }
-}
-
-#projects {
-    @include flex-rules(column, center, center, no-wrap);
-    width: 80%;
-    min-height: 80vh;
-    background-color: $background-projects;
-    border-radius: 15px;
-    margin-bottom: 5%;
-    .title {
-        padding: 1%;
-        color: $color-projects;
-        font-size: 2rem;
-    }
-    .every-project-container {
-        @include flex-rules(row, center, center, wrap);
-        width: 90%;
-        border: 3px solid $color-projects;
+#about{ 
+    .outer {//this ridiculousness is just for looks
+        @include flex-rules(column, center, center, no-wrap);
+        width: 80%;
+        min-height: 80vh;
+        background-color: $background-about;
         border-radius: 15px;
-        margin: 2% auto;
-        h3 {
-            flex: 100%;
-            text-align: center;
-            padding: 1% 0;
-            color: $color-projects;
-            font-size: 1.5rem;
-        }
-        .left-side-project-card {
-            @include flex-rules(column, start, center, wrap);
-            flex: 40%;
+        margin: 6% auto;
+        .title {
             padding: 1%;
-            img {
-                width: 15rem;
-                border-radius: 15px;
-                border: 2px solid $color-projects;
-            }
-            .projects-button-container {
-                @include flex-rules(row, space-around, center, wrap);
-                padding: 1%;
-                width: 50%;
-                button {
-                    white-space: nowrap;
-                    width: 100%;
-                    padding: 3px;
-                    background-color: $color-projects;
-                    color: $background-projects-buttons;
+            color: $color-about;
+            font-size: 3rem;
+        }
+        img {
+            border: 3px solid $color-about;
+            border-radius: 50%;
+            width: 10rem;
+        }
+        p {
+            padding: 1%;
+            color: $color-about;
+            text-align: center;
+            width: 90%;
+        }
+        .icon-container {
+            @include flex-rules(row, space-between, center, wrap);
+            margin-top: 2%;
+            color: $color-about;
+            width: 80%;
+            i {
+                font-size: 2rem;
+                text-align: center;
+                span {
+                    display: block;
+                    font-size: .5rem;
                 }
             }
         }
-        .right-side-project-card {
-            @include flex-rules(row, center, space-between, wrap);
-            flex: 60%;
-            height: 100%;
+    }
+}
+
+
+#projects {
+    .outer {//this ridiculousness is just for looks
+        @include flex-rules(column, center, center, no-wrap);
+        width: 80%;
+        min-height: 80vh;
+        background-color: $background-projects;
+        border-radius: 15px;
+        margin: 6% auto;
+        padding: 5% 0;
+        .title {
+            padding: 1%;
             color: $color-projects;
-            padding: 2%;
-            p {
-                margin: 5% auto;
+            font-size: 3rem;
+        }
+        .every-project-container {
+            @include flex-rules(row, center, center, wrap);
+            width: 90%;
+            border: 3px solid $color-projects;
+            border-radius: 15px;
+            margin: 2% auto;
+            background-color: $background-projects-each;
+            .left-side-project-card {
+                @include flex-rules(column, start, center, wrap);
+                flex: 40%;
+                padding: 1%;
+                img {
+                    width: 15rem;
+                    border-radius: 15px;
+                    border: 2px solid $color-projects-each;
+                }
+                .projects-button-container {
+                    @include flex-rules(row, space-around, center, wrap);
+                    padding: 1%;
+                    width: 50%;
+                    button {
+                        white-space: nowrap;
+                        font-weight: 600;
+                        width: 100%;
+                        padding: 5px;
+                        border-radius: 10px;
+                        border-color: $color-projects-each;
+                        background-color: $background-projects;
+                        color: $color-projects
+                    }
+                }
             }
+            .right-side-project-card {
+                @include flex-rules(row, center, space-between, wrap);
+                flex: 60%;
+                height: 100%;
+                color: $color-projects-each;
+                padding: .5% 1.5%;
+                h3 {
+                    flex: 100%;
+                    text-align: center;
+                    padding: 1% 0;
+                    color: $color-projects-each;
+                    font-size: 1.5rem;
+                }
+                p {
+                    margin: 1% auto;
+                }
+                i {
+                    text-align: center;
+                    font-size: 1.25rem;
+                    margin: 1%;
+                    span {
+                        display: block;
+                        font-size: .75rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    width: 100%;
+    .outer {//this ridiculousness is just for looks
+        @include flex-rules(row, center, center, wrap);
+        width: 80%;
+        min-height: 80vh;
+        background-color: $background-contact;
+        color: $color-contact;
+        border-radius: 15px;
+        margin: 6% auto;
+        .title {
+            flex: 100%;
+            padding: 1%;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .social-icons {
+            flex: 50%;
+            text-align: center;
             i {
                 font-size: 2rem;
-                margin: 1%;
+                margin: auto 3%;
+            }
+        }
+        .contact-form {
+            flex: 50%;
+            form {
+                @include flex-rules(column, center, center, wrap);
+                input {
+                    border-radius: 5px;
+                    padding: 1.5%;
+                    width: 50%;
+                }
+                textarea {
+                    border-radius: 5px;
+                    width: 50%;
+                    height: 10rem;
+                }
             }
         }
     }

@@ -141,7 +141,7 @@ body {
   text-align: center;
 }
 
-#about {
+#about .outer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,28 +161,60 @@ body {
   min-height: 80vh;
   background-color: #2f3a52c9;
   border-radius: 15px;
-  margin-bottom: 5%;
+  margin: 6% auto;
 }
 
-#about .title {
+#about .outer .title {
   padding: 1%;
   color: #c5a452;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
-#about img {
+#about .outer img {
+  border: 3px solid #c5a452;
   border-radius: 50%;
   width: 10rem;
 }
 
-#about p {
+#about .outer p {
   padding: 1%;
   color: #c5a452;
   text-align: center;
   width: 90%;
 }
 
-#projects {
+#about .outer .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 2%;
+  color: #c5a452;
+  width: 80%;
+}
+
+#about .outer .icon-container i {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#about .outer .icon-container i span {
+  display: block;
+  font-size: .5rem;
+}
+
+#projects .outer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,18 +232,19 @@ body {
       flex-wrap: no-wrap;
   width: 80%;
   min-height: 80vh;
-  background-color: #a1485dc9;
+  background-color: #80406dc9;
   border-radius: 15px;
-  margin-bottom: 5%;
+  margin: 6% auto;
+  padding: 5% 0;
 }
 
-#projects .title {
+#projects .outer .title {
   padding: 1%;
-  color: #88e992;
-  font-size: 2rem;
+  color: #cdcf6d;
+  font-size: 3rem;
 }
 
-#projects .every-project-container {
+#projects .outer .every-project-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -228,22 +261,13 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 90%;
-  border: 3px solid #88e992;
+  border: 3px solid #cdcf6d;
   border-radius: 15px;
   margin: 2% auto;
+  background-color: #cdcf6db7;
 }
 
-#projects .every-project-container h3 {
-  -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-          flex: 100%;
-  text-align: center;
-  padding: 1% 0;
-  color: #88e992;
-  font-size: 1.5rem;
-}
-
-#projects .every-project-container .left-side-project-card {
+#projects .outer .every-project-container .left-side-project-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,13 +289,13 @@ body {
   padding: 1%;
 }
 
-#projects .every-project-container .left-side-project-card img {
+#projects .outer .every-project-container .left-side-project-card img {
   width: 15rem;
   border-radius: 15px;
-  border: 2px solid #88e992;
+  border: 2px solid #2f3a52;
 }
 
-#projects .every-project-container .left-side-project-card .projects-button-container {
+#projects .outer .every-project-container .left-side-project-card .projects-button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,15 +314,18 @@ body {
   width: 50%;
 }
 
-#projects .every-project-container .left-side-project-card .projects-button-container button {
+#projects .outer .every-project-container .left-side-project-card .projects-button-container button {
   white-space: nowrap;
+  font-weight: 600;
   width: 100%;
-  padding: 3px;
-  background-color: #88e992;
-  color: #a1485d;
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #2f3a52;
+  background-color: #80406dc9;
+  color: #cdcf6d;
 }
 
-#projects .every-project-container .right-side-project-card {
+#projects .outer .every-project-container .right-side-project-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,16 +345,117 @@ body {
       -ms-flex: 60%;
           flex: 60%;
   height: 100%;
-  color: #88e992;
-  padding: 2%;
+  color: #2f3a52;
+  padding: .5% 1.5%;
 }
 
-#projects .every-project-container .right-side-project-card p {
-  margin: 5% auto;
+#projects .outer .every-project-container .right-side-project-card h3 {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  text-align: center;
+  padding: 1% 0;
+  color: #2f3a52;
+  font-size: 1.5rem;
 }
 
-#projects .every-project-container .right-side-project-card i {
-  font-size: 2rem;
+#projects .outer .every-project-container .right-side-project-card p {
+  margin: 1% auto;
+}
+
+#projects .outer .every-project-container .right-side-project-card i {
+  text-align: center;
+  font-size: 1.25rem;
   margin: 1%;
+}
+
+#projects .outer .every-project-container .right-side-project-card i span {
+  display: block;
+  font-size: .75rem;
+}
+
+#contact {
+  width: 100%;
+}
+
+#contact .outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 80%;
+  min-height: 80vh;
+  background-color: #b8664dc9;
+  color: #8fbda2;
+  border-radius: 15px;
+  margin: 6% auto;
+}
+
+#contact .outer .title {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  padding: 1%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#contact .outer .social-icons {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  text-align: center;
+}
+
+#contact .outer .social-icons i {
+  font-size: 2rem;
+  margin: auto 3%;
+}
+
+#contact .outer .contact-form {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+#contact .outer .contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#contact .outer .contact-form form input {
+  border-radius: 5px;
+  padding: 1.5%;
+  width: 50%;
+}
+
+#contact .outer .contact-form form textarea {
+  border-radius: 5px;
+  width: 50%;
+  height: 10rem;
 }
 /*# sourceMappingURL=style.css.map */
