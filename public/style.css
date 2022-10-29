@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #251e38;
+  background-color: #5c3466;
   font-family: "Ubuntu", sans-serif;
 }
 
@@ -29,12 +29,13 @@ body {
           align-items: center;
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
-  background-image: url("../src/media/background-with-animals.png");
+  background-image: url("../src/media/background-with-animals2.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 97% 102%;
   background-size: cover;
   height: 100%;
+  resize: none;
 }
 
 .navbar {
@@ -80,6 +81,12 @@ body {
   width: 50%;
 }
 
+@media (max-width: 890px) {
+  .navbar ul {
+    width: 90%;
+  }
+}
+
 .navbar ul li {
   list-style: none;
 }
@@ -89,6 +96,18 @@ body {
   text-decoration: none;
   color: #bce874;
   font-weight: 500;
+}
+
+@media (max-width: 890px) {
+  .navbar ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar ul li a {
+    font-size: .75rem;
+  }
 }
 
 #home {
@@ -108,6 +127,7 @@ body {
   -ms-flex-wrap: no-wrap;
       flex-wrap: no-wrap;
   min-height: 100vh;
+  background-color: transparent;
 }
 
 #home .my-name {
@@ -121,6 +141,42 @@ body {
   margin-top: 15%;
 }
 
+@media (max-width: 1450px) {
+  #home .my-name {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  #home .my-name {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 890px) {
+  #home .my-name {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #home .my-name {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #home .my-name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 350px) {
+  #home .my-name {
+    font-size: 2rem;
+  }
+}
+
 #home .title {
   font-size: 3rem;
   font-family: "Abril Fatface", cursive;
@@ -131,14 +187,34 @@ body {
   text-align: center;
 }
 
-#home .hobby {
-  font-size: 2rem;
-  font-family: "Abril Fatface", cursive;
-  color: #1a132b;
-  letter-spacing: 1px;
-  word-spacing: normal;
-  word-break: normal;
-  text-align: center;
+@media (max-width: 1450px) {
+  #home .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  #home .title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 890px) {
+  #home .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #home .title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #home .title {
+    font-size: 1.5rem;
+  }
 }
 
 #about .outer {
@@ -199,14 +275,33 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 2%;
+  margin: 2%;
   color: #c5a452;
   width: 80%;
 }
 
+@media (max-width: 850px) {
+  #about .outer .icon-container {
+    margin: 4%;
+  }
+}
+
 #about .outer .icon-container i {
+  -webkit-box-flex: 10%;
+      -ms-flex: 10%;
+          flex: 10%;
   font-size: 2rem;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  #about .outer .icon-container i {
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    margin: 1%;
+    font-size: 1.75rem;
+  }
 }
 
 #about .outer .icon-container i span {
@@ -275,9 +370,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -287,12 +382,19 @@ body {
       -ms-flex: 40%;
           flex: 40%;
   padding: 1%;
+  height: 100%;
 }
 
 #projects .outer .every-project-container .left-side-project-card img {
   width: 15rem;
   border-radius: 15px;
   border: 2px solid #2f3a52;
+}
+
+@media (max-width: 460px) {
+  #projects .outer .every-project-container .left-side-project-card img {
+    width: 10rem;
+  }
 }
 
 #projects .outer .every-project-container .left-side-project-card .projects-button-container {
@@ -311,7 +413,37 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1%;
-  width: 50%;
+  width: 60%;
+}
+
+@media (max-width: 1104px) {
+  #projects .outer .every-project-container .left-side-project-card .projects-button-container {
+    width: 30%;
+  }
+}
+
+@media (max-width: 890px) {
+  #projects .outer .every-project-container .left-side-project-card .projects-button-container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) {
+  #projects .outer .every-project-container .left-side-project-card .projects-button-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 550px) {
+  #projects .outer .every-project-container .left-side-project-card .projects-button-container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  #projects .outer .every-project-container .left-side-project-card .projects-button-container {
+    width: 80%;
+  }
 }
 
 #projects .outer .every-project-container .left-side-project-card .projects-button-container button {
@@ -323,6 +455,18 @@ body {
   border-color: #2f3a52;
   background-color: #80406dc9;
   color: #cdcf6d;
+}
+
+@media (max-width: 550px) {
+  #projects .outer .every-project-container .left-side-project-card .projects-button-container button {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 460px) {
+  #projects .outer .every-project-container .left-side-project-card .projects-button-container button {
+    font-size: 80%;
+  }
 }
 
 #projects .outer .every-project-container .right-side-project-card {
@@ -349,6 +493,12 @@ body {
   padding: .5% 1.5%;
 }
 
+@media (max-width: 1100px) {
+  #projects .outer .every-project-container .right-side-project-card {
+    padding: 2% 1.5%;
+  }
+}
+
 #projects .outer .every-project-container .right-side-project-card h3 {
   -webkit-box-flex: 100%;
       -ms-flex: 100%;
@@ -363,6 +513,12 @@ body {
   margin: 1% auto;
 }
 
+@media (max-width: 890px) {
+  #projects .outer .every-project-container .right-side-project-card p {
+    padding: 1% 2%;
+  }
+}
+
 #projects .outer .every-project-container .right-side-project-card i {
   text-align: center;
   font-size: 1.25rem;
@@ -374,6 +530,18 @@ body {
   font-size: .75rem;
 }
 
+@media (max-width: 1105px) {
+  #projects .outer .every-project-container .right-side-project-card i span {
+    font-size: .5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #projects .outer .every-project-container .right-side-project-card i span {
+    font-size: .35rem;
+  }
+}
+
 #contact {
   width: 100%;
 }
@@ -382,10 +550,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -400,22 +568,19 @@ body {
   color: #8fbda2;
   border-radius: 15px;
   margin: 6% auto;
+  padding: 5% 0;
 }
 
 #contact .outer .title {
-  -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-          flex: 100%;
   padding: 1%;
   font-size: 3rem;
   text-align: center;
 }
 
 #contact .outer .social-icons {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
+  width: 60%;
   text-align: center;
+  margin: 3% auto;
 }
 
 #contact .outer .social-icons i {
@@ -424,9 +589,13 @@ body {
 }
 
 #contact .outer .contact-form {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
+  width: 60%;
+}
+
+@media (max-width: 700px) {
+  #contact .outer .contact-form {
+    width: 90%;
+  }
 }
 
 #contact .outer .contact-form form {
@@ -448,14 +617,80 @@ body {
 }
 
 #contact .outer .contact-form form input {
-  border-radius: 5px;
+  width: 100%;
   padding: 1.5%;
-  width: 50%;
+  margin-bottom: 1%;
+  color: #8fbda2;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 3px solid #8fbda2;
 }
 
-#contact .outer .contact-form form textarea {
+#contact .outer .contact-form form input::-webkit-input-placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form input:-ms-input-placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form input::-ms-input-placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form input::placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form input:focus {
+  outline: none;
+}
+
+#contact .outer .contact-form form input[type=submit] {
+  font-weight: bold;
+  color: #8fbda2;
+  background-color: #b8664d;
+  border: 3px solid #8fbda2;
   border-radius: 5px;
-  width: 50%;
+}
+
+#contact .outer .contact-form form #message {
+  width: 100%;
   height: 10rem;
+  padding: 1.5%;
+  margin-bottom: 1%;
+  color: #8fbda2;
+  background-color: transparent;
+  border: 3px solid #8fbda2;
+  border-radius: 5px;
+  resize: none;
+}
+
+#contact .outer .contact-form form #message::-webkit-input-placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form #message:-ms-input-placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form #message::-ms-input-placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form #message::placeholder {
+  color: #8fbda2;
+  opacity: .80;
+}
+
+#contact .outer .contact-form form #message:focus {
+  outline: none;
 }
 /*# sourceMappingURL=style.css.map */

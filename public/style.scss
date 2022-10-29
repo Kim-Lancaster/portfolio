@@ -14,8 +14,11 @@ $background-nav: #372e4f8e;
 $background-about: #2f3a52c9;
 $background-projects: #80406dc9;
 $background-projects-each: #cdcf6db7;
-$background-projects-buttons: #2f3a52;
 $background-contact: #b8664dc9;
+
+//buttons
+$background-projects-buttons: #2f3a52;
+$background-contact-buttons: #b8664d;
 //fonts
 $title-font: 'Abril Fatface', cursive;
 $regular-font: 'Ubuntu', sans-serif;
@@ -45,18 +48,20 @@ $regular-font: 'Ubuntu', sans-serif;
     font-size: 20px;
 }
 body {
-    background-color: $background-main;
+    background-color: #5c3466;
     font-family: $regular-font;
 }
 .background-image {
     @include flex-rules(column, center, center, no-wrap);
-    background-image: url("../src/media/background-with-animals.png");
+    background-image: url("../src/media/background-with-animals2.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 97% 102%;
     background-size: cover;
-    height: 100%;
+    height: 100%;   
+    resize: none;
 }
+
 .navbar {
     @include flex-rules(row, center, center, no-wrap);
     position: sticky;
@@ -67,6 +72,9 @@ body {
     ul {
         @include flex-rules(row, space-between, center, no-wrap);
         width: 50%;
+        @media(max-width: 890px){
+            width: 90%;
+        }
         li {
             list-style: none;
             a {
@@ -74,6 +82,12 @@ body {
                text-decoration: none;
                color: $color-nav;
                font-weight: 500;
+                @media(max-width: 890px){
+                    font-size: 1rem;
+                }
+                @media(max-width: 500px){
+                    font-size: .75rem;
+                }
             }
             
         }
@@ -82,15 +96,46 @@ body {
 #home {
     @include flex-rules(column, start, center, no-wrap);
     min-height: 100vh;
+    background-color: transparent;
     .my-name {
         @include text-rules(10rem, $title-font, $color-home, 4px, normal, normal, center);
         margin-top: 15%;
+        @media(max-width: 1450px){
+            font-size: 8rem;
+        }
+        @media(max-width: 1150px){
+            font-size: 6rem;
+        }
+        @media(max-width: 890px){
+            font-size: 5rem;
+        }
+        @media(max-width: 500px){
+            font-size: 4rem;
+        }
+        @media(max-width: 450px){
+            font-size: 3rem;
+        }
+        @media(max-width: 350px){
+            font-size: 2rem;
+        }
     }
     .title {
         @include text-rules(3rem, $title-font, $color-home, 2px, normal, normal, center);
-    }
-    .hobby {
-        @include text-rules(2rem, $title-font, $color-home, 1px, normal, normal, center)
+        @media(max-width: 1450px){
+            font-size: 2.8rem;
+        }
+        @media(max-width: 1150px){
+            font-size: 2.4rem;
+        }
+        @media(max-width: 890px){
+            font-size: 2rem;
+        }
+        @media(max-width: 500px){
+            font-size: 1.75rem;
+        }
+        @media(max-width: 450px){
+            font-size: 1.5rem;
+        }
     }
 }
 
@@ -120,12 +165,21 @@ body {
         }
         .icon-container {
             @include flex-rules(row, space-between, center, wrap);
-            margin-top: 2%;
+            margin: 2%;
             color: $color-about;
             width: 80%;
+            @media(max-width: 850px){
+                margin: 4%;
+            }
             i {
+                flex: 10%;
                 font-size: 2rem;
                 text-align: center;
+                @media(max-width: 700px){
+                    flex: 25%;
+                    margin: 1%;
+                    font-size: 1.75rem;
+                }
                 span {
                     display: block;
                     font-size: .5rem;
@@ -158,18 +212,37 @@ body {
             margin: 2% auto;
             background-color: $background-projects-each;
             .left-side-project-card {
-                @include flex-rules(column, start, center, wrap);
+                @include flex-rules(column, space-between, center, wrap);
                 flex: 40%;
                 padding: 1%;
+                height: 100%;
                 img {
                     width: 15rem;
                     border-radius: 15px;
                     border: 2px solid $color-projects-each;
+                    @media(max-width: 460px){
+                        width: 10rem;
+                    }
                 }
                 .projects-button-container {
                     @include flex-rules(row, space-around, center, wrap);
                     padding: 1%;
-                    width: 50%;
+                    width: 60%;
+                        @media(max-width: 1104px){
+                            width: 30%;
+                        }
+                        @media(max-width: 890px){
+                            width: 40%;
+                        }
+                        @media(max-width: 700px){
+                            width: 50%;
+                        }
+                        @media(max-width: 550px){
+                            width: 60%;
+                        }
+                        @media(max-width: 400px){
+                            width: 80%;
+                        }
                     button {
                         white-space: nowrap;
                         font-weight: 600;
@@ -178,7 +251,13 @@ body {
                         border-radius: 10px;
                         border-color: $color-projects-each;
                         background-color: $background-projects;
-                        color: $color-projects
+                        color: $color-projects;
+                        @media(max-width:550px){
+                            font-size: 90%;
+                        }
+                        @media(max-width: 460px){
+                            font-size: 80%;
+                        }
                     }
                 }
             }
@@ -188,6 +267,9 @@ body {
                 height: 100%;
                 color: $color-projects-each;
                 padding: .5% 1.5%;
+                @media(max-width: 1100px){
+                    padding: 2% 1.5%;
+                }
                 h3 {
                     flex: 100%;
                     text-align: center;
@@ -197,6 +279,9 @@ body {
                 }
                 p {
                     margin: 1% auto;
+                    @media(max-width: 890px){
+                        padding: 1% 2%;
+                    }
                 }
                 i {
                     text-align: center;
@@ -205,6 +290,12 @@ body {
                     span {
                         display: block;
                         font-size: .75rem;
+                        @media(max-width: 1105px){
+                            font-size:.5rem;
+                        }
+                        @media(max-width: 700px){
+                            font-size: .35rem;
+                        }
                     }
                 }
             }
@@ -215,40 +306,75 @@ body {
 #contact {
     width: 100%;
     .outer {//this ridiculousness is just for looks
-        @include flex-rules(row, center, center, wrap);
+        @include flex-rules(column, center, center, wrap);
         width: 80%;
         min-height: 80vh;
         background-color: $background-contact;
         color: $color-contact;
         border-radius: 15px;
         margin: 6% auto;
+        padding: 5% 0;
         .title {
-            flex: 100%;
             padding: 1%;
             font-size: 3rem;
             text-align: center;
         }
         .social-icons {
-            flex: 50%;
+            width: 60%;
             text-align: center;
+            margin: 3% auto;
             i {
                 font-size: 2rem;
                 margin: auto 3%;
             }
         }
         .contact-form {
-            flex: 50%;
+            width: 60%;
+            @media(max-width: 700px){
+                width: 90%;
+            }
             form {
                 @include flex-rules(column, center, center, wrap);
                 input {
-                    border-radius: 5px;
+                    width: 100%;
                     padding: 1.5%;
-                    width: 50%;
+                    margin-bottom: 1%;
+                    color: $color-contact;
+                    background-color: transparent;
+                    border: transparent;
+                    border-bottom: 3px solid $color-contact;
+                    &::placeholder {
+                        color: $color-contact;
+                        opacity: .80;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
                 }
-                textarea {
+                input[type=submit] {
+                    font-weight: bold;
+                    color: $color-contact;
+                    background-color: $background-contact-buttons;
+                    border: 3px solid $color-contact;
                     border-radius: 5px;
-                    width: 50%;
+                }
+                #message {
+                    width: 100%;
                     height: 10rem;
+                    padding: 1.5%;
+                    margin-bottom: 1%;
+                    color: $color-contact;
+                    background-color: transparent;
+                    border: 3px solid $color-contact;
+                    border-radius: 5px;
+                    resize: none;
+                    &::placeholder {
+                        color: $color-contact;
+                        opacity: .80;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
                 }
             }
         }
