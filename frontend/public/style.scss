@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+//////VARIABLES///////
+//Font colors
+$color-home: #1a132b;
+$color-nav: #bce874;
+$color-about: #c5a452;
+$color-projects: #cdcf6d;
+$color-projects-each: #2f3a52;
+$color-contact: #8fbda2;
+//Background colors
+$background-main: #251e38;
+$background-nav: #372e4f8e;
+$background-about: #2f3a52c9;
+$background-projects: #80406dc9;
+$background-projects-each: #cdcf6db7;
+$background-contact: #b8664dc9;
+//buttons and misc
+$background-projects-buttons: #2f3a52;
+$background-contact-buttons: #b8664d;
+$color-contact-accent: #4a696a;
+//fonts
+$title-font: 'Abril Fatface', cursive;
+$regular-font: 'Ubuntu', sans-serif;
+
+//mixins
+@mixin flex-rules($direction, $justify, $align, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+@mixin text-rules($size, $family, $color, $letters, $word, $break, $align){
+    font-size: $size;
+    font-family: $family;
+    color: $color;
+    letter-spacing: $letters;
+    word-spacing: $word;
+    word-break: $break;
+    text-align: $align;
+}
+//Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    @media(max-width: 320px){
+        font-size: 98%;
+    }
+}
+body {
+    background-color: #5c3466;
+    font-family: $regular-font;
+}
+.background-image {
+    @include flex-rules(column, center, center, no-wrap);
+    background-image: url("../src/media/background-with-animals2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 97% 102%;
+    background-size: cover;
+    height: 100%;   
+    resize: none;
+}
+
+.navbar {
+    @include flex-rules(row, center, center, no-wrap);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: $background-nav;
+    ul {
+        @include flex-rules(row, space-between, center, no-wrap);
+        width: 50%;
+        @media(max-width: 890px){
+            width: 90%;
+        }
+        li {
+            list-style: none;
+            a {
+               font-size: 1.25rem;
+               text-decoration: none;
+               color: $color-nav;
+               font-weight: 500;
+                @media(max-width: 890px){
+                    font-size: 1rem;
+                }
+                @media(max-width: 500px){
+                    font-size: .75rem;
+                }
+            }
+            
+        }
+    }
+}
+#home {
+    @include flex-rules(column, start, center, no-wrap);
+    min-height: 100vh;
+    background-color: transparent;
+    .my-name {
+        @include text-rules(10rem, $title-font, $color-home, 4px, normal, normal, center);
+        margin-top: 15%;
+        @media(max-width: 1450px){
+            font-size: 8rem;
+        }
+        @media(max-width: 1150px){
+            font-size: 6rem;
+        }
+        @media(max-width: 890px){
+            font-size: 5rem;
+        }
+        @media(max-width: 500px){
+            font-size: 4rem;
+        }
+        @media(max-width: 450px){
+            font-size: 3rem;
+        }
+        @media(max-width: 350px){
+            font-size: 2rem;
+        }
+    }
+    .title {
+        @include text-rules(3rem, $title-font, $color-home, 2px, normal, normal, center);
+        @media(max-width: 1450px){
+            font-size: 2.8rem;
+        }
+        @media(max-width: 1150px){
+            font-size: 2.4rem;
+        }
+        @media(max-width: 890px){
+            font-size: 2rem;
+        }
+        @media(max-width: 500px){
+            font-size: 1.75rem;
+        }
+        @media(max-width: 450px){
+            font-size: 1.5rem;
+        }
+    }
+}
+
+#about{ 
+    .outer {//this ridiculousness is just for looks
+        @include flex-rules(column, center, center, no-wrap);
+        width: 80%;
+        min-height: 80vh;
+        background-color: $background-about;
+        border-radius: 15px;
+        margin: 6% auto;
+        .title {
+            padding: 1%;
+            color: $color-about;
+            font-size: 3rem;
+            text-align: center;
+        }
+        img {
+            border: 3px solid $color-about;
+            border-radius: 50%;
+            width: 10rem;
+        }
+        p {
+            padding: 1%;
+            color: $color-about;
+            text-align: center;
+            width: 90%;
+        }
+        .icon-container {
+            @include flex-rules(row, space-between, center, wrap);
+            margin: 2%;
+            color: $color-about;
+            width: 80%;
+            @media(max-width: 850px){
+                margin: 4%;
+            }
+            i {
+                flex: 10%;
+                font-size: 2rem;
+                text-align: center;
+                @media(max-width: 700px){
+                    flex: 25%;
+                    margin: 1%;
+                    font-size: 1.75rem;
+                }
+                span {
+                    display: block;
+                    font-size: .5rem;
+                }
+            }
+        }
+    }
+}
+
+
+#projects {
+    .outer {//this ridiculousness is just for looks
+        @include flex-rules(column, center, center, no-wrap);
+        width: 80%;
+        min-height: 80vh;
+        background-color: $background-projects;
+        border-radius: 15px;
+        margin: 6% auto;
+        padding: 3% 0;
+        .title {
+            padding: 1%;
+            color: $color-projects;
+            font-size: 3rem;
+        }
+        .every-project-container {
+            @include flex-rules(row, center, center, wrap);
+            width: 90%;
+            border: 3px solid $color-projects;
+            border-radius: 15px;
+            margin: 2% auto;
+            background-color: $background-projects-each;
+            .left-side-project-card {
+                @include flex-rules(column, space-between, center, wrap);
+                flex: 40%;
+                padding: 1%;
+                height: 100%;
+                img {
+                    width: 15rem;
+                    border-radius: 15px;
+                    border: 2px solid $color-projects-each;
+                    @media(max-width: 460px){
+                        width: 10rem;
+                    }
+                }
+                .projects-button-container {
+                    @include flex-rules(row, space-around, center, wrap);
+                    padding: 1%;
+                    width: 60%;
+                        @media(max-width: 1104px){
+                            width: 30%;
+                        }
+                        @media(max-width: 890px){
+                            width: 40%;
+                        }
+                        @media(max-width: 700px){
+                            width: 50%;
+                        }
+                        @media(max-width: 550px){
+                            width: 60%;
+                        }
+                        @media(max-width: 400px){
+                            width: 80%;
+                        }
+                    button {
+                        white-space: nowrap;
+                        font-weight: 600;
+                        width: 100%;
+                        padding: 5px;
+                        border-radius: 10px;
+                        border-color: $color-projects-each;
+                        background-color: $background-projects;
+                        color: $color-projects;
+                        &:hover {
+                            border-color: $background-projects;
+                            background-color: $color-projects-each;
+                            border-color: $color-projects-each;
+                            cursor: pointer;
+                        }
+                        @media(max-width:550px){
+                            font-size: 90%;
+                        }
+                        @media(max-width: 460px){
+                            font-size: 80%;
+                        }
+                    }
+                }
+            }
+            .right-side-project-card {
+                @include flex-rules(row, center, space-between, wrap);
+                flex: 60%;
+                height: 100%;
+                color: $color-projects-each;
+                padding: .5% 1.5%;
+                @media(max-width: 1100px){
+                    padding: 2% 1.5%;
+                }
+                h3 {
+                    flex: 100%;
+                    text-align: center;
+                    padding: 1% 0;
+                    color: $color-projects-each;
+                    font-size: 1.5rem;
+                }
+                p {
+                    margin: 1% auto;
+                    @media(max-width: 890px){
+                        padding: 1% 2%;
+                    }
+                }
+                i {
+                    text-align: center;
+                    font-size: 1.25rem;
+                    margin: 1%;
+                    span {
+                        display: block;
+                        font-size: .75rem;
+                        @media(max-width: 1105px){
+                            font-size:.5rem;
+                        }
+                        @media(max-width: 700px){
+                            font-size: .35rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#contact {
+    width: 100%;
+    .outer {//this ridiculousness is just for looks
+        @include flex-rules(column, start, center, wrap);
+        width: 80%;
+        min-height: 80vh;
+        background-color: $background-contact;
+        color: $color-contact;
+        border-radius: 15px;
+        margin: 6% auto;
+        padding: 3% 0;
+        .title {
+            padding: 1%;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .social-icons {
+            width: 60%;
+            text-align: center;
+            margin: 3% auto;
+            a {
+                color: $color-contact;
+                i {
+                    font-size: 2rem;
+                    margin: auto 3%;
+                    &:hover {
+                        color: $color-contact-accent;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+        .contact-form {
+            width: 60%;
+            @media(max-width: 700px){
+                width: 90%;
+            }
+            form {
+                @include flex-rules(column, center, center, wrap);
+                input {
+                    width: 100%;
+                    padding: 1.5%;
+                    margin-bottom: 1%;
+                    color: $color-contact-accent;
+                    background-color: transparent;
+                    border: transparent;
+                    border-bottom: 3px solid $color-contact;
+                    &::placeholder {
+                        color: $color-contact;
+                        opacity: .80;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                input[type=submit] {
+                    font-weight: bold;
+                    color: $color-contact;
+                    background-color: $background-contact-buttons;
+                    border: 3px solid $color-contact;
+                    border-radius: 5px;
+                    &:hover {
+                        color: $background-contact-buttons;
+                        background-color: $color-contact;
+                        cursor: pointer;
+                    }
+                }
+                #message {
+                    width: 100%;
+                    height: 10rem;
+                    padding: 1.5%;
+                    margin-bottom: 1%;
+                    color: $color-contact-accent;
+                    background-color: transparent;
+                    border: 3px solid $color-contact;
+                    border-radius: 5px;
+                    resize: none;
+                    &::placeholder {
+                        color: $color-contact;
+                        opacity: .80;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
