@@ -15,6 +15,8 @@ function Contact(){
         message: ""
     })
 
+    const [sentMessage, setSentMessage] = useState("");
+
     function handleChange(e){
         const {name, value} = e.target;
         setFormInfo(prevValue => {
@@ -25,9 +27,26 @@ function Contact(){
         })
     }
 
-    function handleClick(e){
-        e.preventDefault()
-        console.log(formInfo);
+    async function handleSubmit(e){
+        e.preventDefault();
+        try{
+            fetch('http://localhost:3001/', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(formInfo)
+            });
+            setFormInfo({
+                name: "",
+                email: "",
+                tel: "",
+                date: currentDate,
+                message: ""
+            })
+            setSentMessage("Thank you!  I will be in touch shortly!")
+        } catch(error){
+            console.log(error);
+        }
+
     }
 
     return(
@@ -40,13 +59,20 @@ function Contact(){
                     <a href="https://codepen.io/kim-lancaster"><Icon icon="fa-brands fa-codepen" iconName={nothing} /></a>
                 </div>
                 <div className="contact-form">
-                    <form>
-                        <input type="text" placeholder="Name" id="name" name="name" onChange={handleChange} required/>
-                        <input type="email" placeholder="Email" id="email" name="email" onChange={handleChange} required/>
-                        <input type="tel" placeholder="Telephone" id="tel" name="tel" onChange={handleChange} />
-                        <textarea id="message" name="message" placeholder="Leave me a message!" onChange={handleChange} required></textarea>
-                        <input type="submit" value="Submit" onClick={handleClick}/>
+                    <form onSubmit={handleSubmit}>
+                        
+                        <input type="text" placeholder="Name" id="name" name="name" onChange={handleChange} value={formInfo.name} required/>
+                        
+                        <input type="email" placeholder="Email" id="email" name="email" onChange={handleChange} value={formInfo.email} required/>
+                        
+                        <input type="tel" placeholder="Telephone" id="tel" name="tel" onChange={handleChange} value={formInfo.tel} />
+                        
+                        <textarea id="message" name="message" placeholder="Leave me a message!" onChange={handleChange} value={formInfo.message} required></textarea>
+                        
+                        <input type="submit" value="Submit"/>
+                    
                     </form>
+                    <p>{sentMessage}</p>
                 </div> 
             </div>
         </section>

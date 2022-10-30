@@ -722,4 +722,9 @@ body {
 #contact .outer .contact-form form #message:focus {
   outline: none;
 }
+
+#contact .outer .contact-form p {
+  text-align: center;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
